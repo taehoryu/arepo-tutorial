@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniLab 2: Plotting Frequencies &mdash; Asteroseismology Across the HRD  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MiniLab 3: Plotting Eigenfunctions" href="minilab-3.html" />
+    <link rel="prev" title="MiniLab 1: First Steps" href="minilab-1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Asteroseismology Across the HRD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="minilab-1.html">MiniLab 1: First Steps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MiniLab 2: Plotting Frequencies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-frequencies-to-history-output">Adding Frequencies to History Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-module-variables">Adding Module Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-module-variables">Setting Module Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-history-columns">Adding History Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-code">Running the Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-the-frequencies">Plotting the Frequencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="minilab-3.html">MiniLab 3: Plotting Eigenfunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxilab.html">MaxiLab: Exploring Mixed Oscillation Modes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supplementary.html">Supplementary Materials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Asteroseismology Across the HRD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>MiniLab 2: Plotting Frequencies</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/minilab-2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="minilab-2-plotting-frequencies">
+<span id="minilab-2"></span><h1>MiniLab 2: Plotting Frequencies<a class="headerlink" href="#minilab-2-plotting-frequencies" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In Minilab 2, we’ll take mode frequencies calculated by GYRE and plot them
+using PGstar. This will involve first adding the frequencies to MESA’s
+history output; and then modifying <code class="docutils literal notranslate"><span class="pre">inlist_pgstar</span></code> to set up
+the plots. As the very first step, make a copy of your working
+directory from <a class="reference internal" href="minilab-1.html#minilab-1"><span class="std std-ref">MiniLab 1</span></a> (with all the changes you have made):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cp -a bellinger-2022-mini-1 bellinger-2022-mini-2
+<span class="gp">$</span> <span class="nb">cd</span> bellinger-2022-mini-2
+</pre></div>
+</div>
+<p>Alternatively, if you were unable to get things working with
+<a class="reference internal" href="minilab-1.html#minilab-1"><span class="std std-ref">MiniLab 1</span></a>, then you can grab a working directory
+for MiniLab 2 from <a class="reference external" href="https://github.com/earlbellinger/mesa-summer-school-2022/raw/main/work-dirs/bellinger-2022-mini-1-solution.tar.gz">here</a>.</p>
+</div>
+<div class="section" id="adding-frequencies-to-history-output">
+<h2>Adding Frequencies to History Output<a class="headerlink" href="#adding-frequencies-to-history-output" title="Permalink to this headline">¶</a></h2>
+<p>The standard approach to adding extra columns to history output is to
+modify the <code class="docutils literal notranslate"><span class="pre">how_many_extra_history_columns</span></code> and
+<code class="docutils literal notranslate"><span class="pre">data_for_extra_history_columns</span></code> hooks. The former defines how many
+extra columns we want to add; while the latter specifies the data to
+put into the columns, together with their associated names. Before we
+make these modifications, however, we have to solve a logistical problem:
+how do we access the GYRE results outside of the <code class="docutils literal notranslate"><span class="pre">process_mode</span></code>
+callback routine?</p>
+<p>The answer is to store these results in ‘module variables’ —
+effectively, global variables that can be accessed from anywhere
+within <code class="docutils literal notranslate"><span class="pre">run_star_extras.f90</span></code>.</p>
+<div class="section" id="adding-module-variables">
+<span id="minilab-2-mod-vars"></span><h3>Adding Module Variables<a class="headerlink" href="#adding-module-variables" title="Permalink to this headline">¶</a></h3>
+<p>Let’s add a couple of module variables to store the frequencies of the
+radial and dipole modes, and the inertias of the dipole modes. Add the following
+code at the appropriate place near the top of
+<code class="docutils literal notranslate"><span class="pre">run_star_extras.f90</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Insert module variables below</span>
+
+    <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">allocatable</span><span class="p">,</span> <span class="k">save</span> <span class="kd">::</span> <span class="n">frequencies</span><span class="p">(:,:)</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">allocatable</span><span class="p">,</span> <span class="k">save</span> <span class="kd">::</span> <span class="n">inertias</span><span class="p">(:)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">save</span></code> attributes ensure that the values of the
+variables are preserved throughout program execution.
+Note that we declare the variables as allocatable arrays,
+and therefore need to allocate them in <cite>extras_startup</cite> and
+initialize them in <cite>extras_start_step</cite>. Therefore, find the following
+code blocks and make the following additions:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Insert allocation code below</span>
+
+       <span class="k">allocate</span><span class="p">(</span><span class="n">inertias</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+       <span class="k">allocate</span><span class="p">(</span><span class="n">frequencies</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>as well as</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Insert additional code below</span>
+
+       <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span>
+          <span class="n">frequencies</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+          <span class="n">frequencies</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+          <span class="n">inertias</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+       <span class="k">end do</span>
+</pre></div>
+</div>
+<p>Note that we are also storing the inertias of the dipole modes.
+That is because we want the most p-dominated modes, and therefore
+need to select the modes with the lowest mode inertias.
+We have allocated space for 100 modes, but in practice we will find
+an <em>a priori</em> unknown amount of around 70 or so.</p>
+</div>
+<div class="section" id="setting-module-variables">
+<h3>Setting Module Variables<a class="headerlink" href="#setting-module-variables" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now modify the <code class="docutils literal notranslate"><span class="pre">process_mode</span></code> callback routine to set these
+module variables. As a reminder, <code class="docutils literal notranslate"><span class="pre">process_mode</span></code> is called each
+time GYRE finds a mode. Therefore, we have to add checks to see
+<em>which</em> mode has been found — and if it is a radial or dipole mode,
+update one or the other module variable accordingly.</p>
+<p>Within <code class="docutils literal notranslate"><span class="pre">process_mode</span></code>, all data for the mode being processed are
+stored in the <code class="docutils literal notranslate"><span class="pre">md</span></code> object. The existing code that prints radial
+frequencies to the screen already shows us how to access
+these data:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! Print out degree, radial order, mode inertia, and frequency</span>
+<span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Found mode: l, n_p, n_g, E, nu = &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+    <span class="n">md</span><span class="p">%</span><span class="n">l</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_g</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">E_norm</span><span class="p">(),</span> <span class="kt">REAL</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">freq</span><span class="p">(</span><span class="s1">&#39;HZ&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">md%n_p</span></code> is a simple integer variable containing the acoustic radial
+order, while <code class="docutils literal notranslate"><span class="pre">md%freq(...)</span></code> is a function that returns the mode frequency
+in the desired units (in this case, Hertz). The <code class="docutils literal notranslate"><span class="pre">REAL(...)</span></code> wrapper
+is required because <code class="docutils literal notranslate"><span class="pre">md%freq(...)</span></code> returns a complex value, with the
+real part containing the frequency and the imaginary part containing
+the growth rate. This also prints the spherical degree <code class="docutils literal notranslate"><span class="pre">md%l</span></code>,
+the g-mode radial order <code class="docutils literal notranslate"><span class="pre">md%n_g</span></code>, and the mode inertia <code class="docutils literal notranslate"><span class="pre">md%E_norm()</span></code>.</p>
+<p>With these points in mind, we can store the frequencies by adding the following
+code to the <code class="docutils literal notranslate"><span class="pre">process_mode</span></code> subroutine. Note that we will calculate
+the frequencies in microHertz (<code class="docutils literal notranslate"><span class="pre">'UHZ'</span></code>) and then normalize
+the frequencies by <code class="docutils literal notranslate"><span class="pre">s%</span> <span class="pre">nu_max</span></code> and <code class="docutils literal notranslate"><span class="pre">s%</span> <span class="pre">delta_nu</span></code> in order to make the plots look nicer.</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">n_p</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">md</span><span class="p">%</span><span class="n">n_p</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="k">then</span>
+
+    <span class="c">! Print out degree, radial order, mode inertia, and frequency</span>
+    <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Found mode: l, n_p, n_g, E, nu = &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+        <span class="n">md</span><span class="p">%</span><span class="n">l</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_g</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">E_norm</span><span class="p">(),</span> <span class="kt">REAL</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">freq</span><span class="p">(</span><span class="s1">&#39;HZ&#39;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">l</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="c">! radial modes</span>
+        <span class="n">frequencies</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">freq</span><span class="p">(</span><span class="s1">&#39;UHZ&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span><span class="p">%</span> <span class="n">nu_max</span><span class="p">)</span> <span class="o">/</span> <span class="n">s</span><span class="p">%</span> <span class="n">delta_nu</span>
+
+    <span class="k">else if</span> <span class="p">(</span><span class="n">inertias</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">md</span><span class="p">%</span><span class="n">E_norm</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">inertias</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        write</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Skipping mode: inertia higher than already seen&#39;</span>
+    <span class="k">else</span> <span class="c">! non-radial modes</span>
+
+        <span class="c">! choose the mode with the lowest inertia</span>
+        <span class="n">inertias</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">)</span> <span class="o">=</span> <span class="n">md</span><span class="p">%</span><span class="n">E_norm</span><span class="p">()</span>
+        <span class="n">frequencies</span><span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">md</span><span class="p">%</span><span class="n">n_p</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">md</span><span class="p">%</span><span class="n">freq</span><span class="p">(</span><span class="s1">&#39;UHZ&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span><span class="p">%</span> <span class="n">nu_max</span><span class="p">)</span> <span class="o">/</span> <span class="n">s</span><span class="p">%</span> <span class="n">delta_nu</span>
+
+    <span class="k">end if</span>
+<span class="k">end if</span>
+</pre></div>
+</div>
+<p>Notice here that we are only saving the dipole mode with the lowest inertia.</p>
+</div>
+<div class="section" id="adding-history-columns">
+<span id="minilab-2-add-hist-cols"></span><h3>Adding History Columns<a class="headerlink" href="#adding-history-columns" title="Permalink to this headline">¶</a></h3>
+<p>We’re now in a position to add two extra columns to history output, in
+which we’ll store the frequencies we’ve calculated. First, edit
+<code class="docutils literal notranslate"><span class="pre">how_many_extra_history_columns</span></code> to set the number of columns:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Change number of history columns below</span>
+
+       <span class="n">how_many_extra_history_columns</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<p>Next, add code to <code class="docutils literal notranslate"><span class="pre">data_for_extra_history_columns</span></code> to set up
+the names and values of the two extra columns:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Insert code to set history column names/values below</span>
+
+       <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span>
+          <span class="k">write</span> <span class="p">(</span><span class="n">names</span><span class="p">(</span><span class="n">k</span><span class="p">),</span>    <span class="s1">&#39;(A,I0)&#39;</span><span class="p">)</span> <span class="s1">&#39;nu_radial_&#39;</span><span class="p">,</span> <span class="n">k</span>
+          <span class="k">write</span> <span class="p">(</span><span class="n">names</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">50</span><span class="p">),</span> <span class="s1">&#39;(A,I0)&#39;</span><span class="p">)</span> <span class="s1">&#39;nu_dipole_&#39;</span><span class="p">,</span> <span class="n">k</span>
+       <span class="k">end do</span>
+
+<span class="k">       if</span> <span class="p">(</span><span class="n">s</span><span class="p">%</span><span class="n">x_logical_ctrl</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="k">then</span>
+
+          <span class="c">! save the frequencies of the radial and dipole modes</span>
+          <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span>
+              <span class="n">vals</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>    <span class="o">=</span> <span class="n">frequencies</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+              <span class="n">vals</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">50</span><span class="p">)</span> <span class="o">=</span> <span class="n">frequencies</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+          <span class="k">end do</span>
+
+<span class="k">       else</span>
+
+          <span class="c">! write out zeros for the 2*50 columns</span>
+          <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span>
+              <span class="n">vals</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+          <span class="k">end do</span>
+
+<span class="k">       </span><span class="n">endif</span>
+</pre></div>
+</div>
+<p>Note that we check <code class="docutils literal notranslate"><span class="pre">s%x_logical_ctrl(1)</span></code> before setting the <code class="docutils literal notranslate"><span class="pre">vals</span></code>
+array; that way, we avoid copying undefined values if running GYRE has been skipped.</p>
+</div>
+</div>
+<div class="section" id="running-the-code">
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">¶</a></h2>
+<p>With these changes to <code class="docutils literal notranslate"><span class="pre">run_star_extras.f90</span></code>, re-compile and re-run
+the code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ./mk
+<span class="gp">$</span> ./rn
+</pre></div>
+</div>
+<p>The history file written to <code class="docutils literal notranslate"><span class="pre">LOGS/history.data</span></code> should now contain
+extra columns, containing the frequency data. An easy way to check
+this is to use the <code class="docutils literal notranslate"><span class="pre">less</span></code> command with the <code class="docutils literal notranslate"><span class="pre">-S</span></code> (chop long lines)
+flag:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> less -S LOGS/history.data
+</pre></div>
+</div>
+<p>(Use the left/right cursors key to scan through the columns).</p>
+</div>
+<div class="section" id="plotting-the-frequencies">
+<h2>Plotting the Frequencies<a class="headerlink" href="#plotting-the-frequencies" title="Permalink to this headline">¶</a></h2>
+<p>We’re now in a position to add a PGstar panel to our
+run, showing how the mode frequencies change as the star evolves. The type
+of panel we’ll use is called a ‘history panel’, which plots columns
+from the history file as a function of model number or time.</p>
+<p>Open up <code class="docutils literal notranslate"><span class="pre">inlist_pgstar</span></code>, and add the following code at the bottom:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! &gt;&gt;&gt; Insert additional parameters below</span>
+
+<span class="c">! History panel showing frequencies</span>
+
+<span class="n">Grid1_plot_name</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;History_Panels1&#39;</span>
+
+<span class="n">History_Panels1_num_panels</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">History_Panels1_title</span> <span class="o">=</span> <span class="s1">&#39;Frequencies&#39;</span>
+<span class="n">History_Panels1_xaxis_name</span> <span class="o">=</span> <span class="s1">&#39;model_number&#39;</span>
+<span class="n">History_Panels1_max_width</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">History_Panels1_yaxis_name</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;nu_radial_10&#39;</span>
+<span class="n">History_Panels1_other_yaxis_name</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;nu_dipole_9&#39;</span>
+
+<span class="n">History_Panels1_same_yaxis_range</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>(Here, the first line indicates where in the existing grid layout to
+place the history panel; the subsequent lines specify what to plot in
+the panel).</p>
+<p>Now re-run the evolution, and consider the following question:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Why do the frequencies move in lockstep, with the dipole mode
+having a nearly constant offset from the radial mode?</p></li>
+</ul>
+</div></blockquote>
+<p>The answer can be found by considering the asymptotic relation,
+which gives that the frequencies of the modes scale with the
+large frequency separation <code class="docutils literal notranslate"><span class="pre">delta_nu</span></code>, the spherical degree,
+and radial order:</p>
+<div class="math notranslate nohighlight">
+\[\nu_{n,\ell} \simeq \Delta\nu\left( n + \ell/2 + \epsilon \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nu_{n,\ell}\)</span> is the frequency of a mode with
+radial order <span class="math notranslate nohighlight">\(n\)</span> and spherical degree <span class="math notranslate nohighlight">\(\ell\)</span>;
+<span class="math notranslate nohighlight">\(\Delta\nu\)</span> is the large frequency separation, and
+<span class="math notranslate nohighlight">\(\epsilon\)</span> is a phase term.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="minilab-1.html" class="btn btn-neutral float-left" title="MiniLab 1: First Steps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="minilab-3.html" class="btn btn-neutral float-right" title="MiniLab 3: Plotting Eigenfunctions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Earl Bellinger, Matthias Fabry, Thomas Steindl, Giulia Cinquegrana, May Gade Pedersen, Rich Townsend, Alina Istrate &amp; Anne Thoul.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
