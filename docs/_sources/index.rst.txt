@@ -11,10 +11,9 @@ text
    :maxdepth: 2
    :caption: Contents
 
-   Agenda
-   Introduction to AREPO
-   Program download and installation
-   Creating initial files
+   Introduction_to_AREPO
+   Program_download_and_installation
+   Creating_initial_files
    Compilling
    Running
    Analyzing

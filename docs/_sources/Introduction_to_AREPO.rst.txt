@@ -1,7 +1,7 @@
 .. _Introduction_to_AREPO:
 
 ******************************************
-Introduction to
+Introduction to AREPO
 ******************************************
 
 Overview

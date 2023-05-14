@@ -1,4 +1,4 @@
-.. _Introduction_to_AREPO:
+.. _Running:
 
 ******************************************
 Introduction to AREPO
