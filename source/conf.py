@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Asteroseismology Across the HRD'
-copyright = '2022, Earl Bellinger, Matthias Fabry, Thomas Steindl, Giulia Cinquegrana, May Gade Pedersen, Rich Townsend, Alina Istrate & Anne Thoul'
-author = 'Earl Bellinger, Matthias Fabry, Thomas Steindl, Giulia Cinquegrana, May Gade Pedersen, Rich Townsend, Alina Istrate & Anne Thoul'
+project = 'AREPO tutorial'
+copyright = '2023, Taeho Ryu'
+author = 'Taeho Ryu'
 
 
 # -- General configuration ---------------------------------------------------
