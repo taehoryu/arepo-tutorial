@@ -3,10 +3,10 @@
 Schedules
 ============
 
-- 9:00  - 9:30  Brief explanation of hydrodynamics simulation
+- 9:00  - 9:30  Brief introduction of hydrodynamics simulation
 - 9:30  - 10:00 Brief introduction of AREPO
 - 10:30 - 11:00 coffee break
-- 11:00 - 12:30 basic structure of AREPO, download, installation and compilation
+- 11:00 - 12:30 Preparation session: download, installation and compilation
 - 12:30 - 13:30 lunch
 - 12:30 - 13:00 running simulation and analyzing data
 - 13:00 - 14:00 running simulation - shock-tube
