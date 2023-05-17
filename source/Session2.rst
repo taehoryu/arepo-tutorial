@@ -4,14 +4,19 @@ Session 2. Introduction to AREPO
 ================================
 
 
-1. How to clone the code
+1. AREPO development
 -------------------------
 
-Write me ...
 
 
 
-Where to find the results
+
+2. Mesh construction
 -------------------------
 
-Write me ...
+
+
+
+
+3. Gravity calculation - Softening
+----------------------------------
