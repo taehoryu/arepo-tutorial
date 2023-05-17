@@ -1,10 +1,10 @@
 
 
-Usage
-=====
+Introduction to AREPO
+======================
 
 
-How to clone the code
+1. How to clone the code
 ---------------------
 
 Write me ...
