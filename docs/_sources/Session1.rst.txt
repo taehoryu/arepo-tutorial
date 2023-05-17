@@ -1,7 +1,7 @@
 
 
-Introduction to hydrodynamics simulation
-=========================================
+Session 1. Introduction to hydrodynamics simulation
+===================================================
 
 
 1. Basic equations

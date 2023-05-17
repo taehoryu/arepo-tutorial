@@ -1,11 +1,11 @@
 
 
-Introduction to AREPO
-======================
+Session 2. Introduction to AREPO
+================================
 
 
 1. How to clone the code
----------------------
+-------------------------
 
 Write me ...
 
