@@ -3,7 +3,7 @@
 Agenda
 =======
 
-The 1-day AREPO tutorial consists of several sessions aimed at,
+This 1-day AREPO tutorial consists of several sessions aimed at,
 
 1. providing a brief description of how AREPO works
 
