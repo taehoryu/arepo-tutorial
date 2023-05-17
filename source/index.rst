@@ -11,11 +11,9 @@ text
    :maxdepth: 2
    :caption: Contents
 
-   Introduction_to_AREPO
-   Program_download_and_installation
-   Creating_initial_files
-   Compilling
-   Running
-   Analyzing
-   supplementary
+   Agenda
+   Schedule
+   Session1
+   Session2
+   Session3
    
