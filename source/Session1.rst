@@ -7,11 +7,10 @@ Session 1. Introduction to hydrodynamics simulation
 1. Basic equations
 ---------------------
 
-Write me ...
-
+A presentation will be given
 
 
 2. Two widely used schems
 -------------------------
 
-Write me ...
+A presentation will be given
