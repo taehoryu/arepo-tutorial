@@ -1,5 +1,5 @@
 ###############################
-AREPO tutorial
+AREPO tutorial for application to Stellar Astrophysics
 ###############################
 
 AREPO tutorial somehwere at the Max-Planck Institute for Astrophysics, given by `Taeho Ryu <https://www.taehoryu.com>`_ on some day in June
