@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 In this session, we will prepare for the practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data.
+``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster with :red:MPA. 
 
 Download
 =========
