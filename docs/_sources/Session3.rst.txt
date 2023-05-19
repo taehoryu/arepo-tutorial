@@ -56,4 +56,4 @@ The path to ``gsl`` is next to ``PATH``. Now add the following lines
    $ incl_dirs = ['/opt/gsl-2.4/include']
    $ libs_dirs = ['/opt/gsl-2.4/lib']
 
-below ``#ADD PATH HERE`` in ``setup.py``
+below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs)
