@@ -74,4 +74,8 @@ Finally, let's install with the following command,
 
    $ python3 setup.py install --user
 
-So
+If you do not see any errors and the installation ends with,
+.. code-blck:: consolr
+
+   $ running install_clib
+   $ customize UnixCCompiler
