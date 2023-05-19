@@ -71,7 +71,14 @@ below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs
 Finally, let's install with the following command,
 
 .. code-block:: console
-   $ /usr/
+
+   $ -------------------------------------------------------------------
+   $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
+   $ module-whatis    Enables usage of gsl 2.4
+   $ prepend-path    PATH    /opt/gsl-2.4/bin
+   $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
+   $ -------------------------------------------------------------------
+
 
 
 So
