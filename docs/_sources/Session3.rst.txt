@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 In this session, we will prepare for the practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster with :red:MPA. 
+``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster (except for directory paths) with :red:MPA.
 
 Download
 =========
@@ -31,7 +31,7 @@ To use ``AREPO``, you don't need to install anything. What you need is proper en
 
 .. code-block:: console
 
-   $ module load anaconda3 gsl
+   $ module load anaconda3 gsl (:red:MPA)
 
 2. Set the path to ``gsl``
 ---------------------------
@@ -49,7 +49,7 @@ which will give the following information,
    $ -------------------------------------------------------------------
    $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
    $ module-whatis    Enables usage of gsl 2.4
-   $ prepend-path    PATH    /opt/gsl-2.4/bin
+   $ prepend-path    PATH    /opt/gsl-2.4/bin (:red:MPA)
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
    $ -------------------------------------------------------------------
 
@@ -63,8 +63,8 @@ and add the following lines,
 
 .. code-block:: python
 
-   incl_dirs = ['/opt/gsl-2.4/include']
-   libs_dirs = ['/opt/gsl-2.4/lib']
+   incl_dirs = ['/opt/gsl-2.4/include'] (:red:MPA)
+   libs_dirs = ['/opt/gsl-2.4/lib'] (:red:MPA)
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 

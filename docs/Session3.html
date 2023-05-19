@@ -93,7 +93,7 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In this session, we will prepare for the practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
-<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> are an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster with :red:MPA.</p>
+<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> are an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster (except for directory paths) with :red:MPA.</p>
 </section>
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
@@ -111,7 +111,7 @@
 <blockquote>
 <div><p>Let’s load a python modules,</p>
 </div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl<span class="w"> </span><span class="o">(</span>:red:MPA<span class="o">)</span>
 </pre></div>
 </div>
 </section>
@@ -125,7 +125,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>-------------------------------------------------------------------
 <span class="gp">$ </span>/usr/common/share/modulefiles/MPA/libs/gsl/2.4:
 <span class="gp">$ </span>module-whatis<span class="w">    </span>Enables<span class="w"> </span>usage<span class="w"> </span>of<span class="w"> </span>gsl<span class="w"> </span><span class="m">2</span>.4
-<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>/opt/gsl-2.4/bin
+<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>/opt/gsl-2.4/bin<span class="w"> </span><span class="o">(</span>:red:MPA<span class="o">)</span>
 <span class="gp">$ </span>prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">    </span>/opt/gsl-2.4/lib
 <span class="gp">$ </span>-------------------------------------------------------------------
 </pre></div>
@@ -135,8 +135,8 @@
 </pre></div>
 </div>
 <p>and add the following lines,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/include&#39;</span><span class="p">]</span>
-<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/lib&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/include&#39;</span><span class="p">]</span> <span class="p">(:</span><span class="n">red</span><span class="p">:</span><span class="n">MPA</span><span class="p">)</span>
+<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/lib&#39;</span><span class="p">]</span> <span class="p">(:</span><span class="n">red</span><span class="p">:</span><span class="n">MPA</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
