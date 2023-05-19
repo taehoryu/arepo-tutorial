@@ -105,25 +105,27 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">  $ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
 
 <span class="go">we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,</span>
-
-<span class="gp">  $ </span>module<span class="w"> </span>show<span class="w"> </span>gsl
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>show<span class="w"> </span>gsl
 </pre></div>
 </div>
 <p>which will give the following information,</p>
-<blockquote>
-<div><p>$ ——————————————————————-
-$ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:</p>
-<p>$ module-whatis    Enables usage of gsl 2.4
-$ prepend-path    PATH    /opt/gsl-2.4/bin
-$ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
-$ ——————————————————————-</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>-------------------------------------------------------------------
+
+<span class="gp">$ </span>/usr/common/share/modulefiles/MPA/libs/gsl/2.4:
+
+<span class="gp">$ </span>module-whatis<span class="w">    </span>Enables<span class="w"> </span>usage<span class="w"> </span>of<span class="w"> </span>gsl<span class="w"> </span><span class="m">2</span>.4
+
+<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>/opt/gsl-2.4/bin
+
+<span class="gp">$ </span>prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">    </span>/opt/gsl-2.4/lib
+
+<span class="gp">$ </span>-------------------------------------------------------------------
+</pre></div>
+</div>
 <p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now add the following lines</p>
-<blockquote>
-<div><p>$ incl_dirs = [‘/opt/gsl-2.4/include’]
-$ libs_dirs = [‘/opt/gsl-2.4/lib’]^C</p>
-</div></blockquote>
-<p>before</p>
+<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code></p>
 </section>
 </section>
 

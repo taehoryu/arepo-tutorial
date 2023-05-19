@@ -34,21 +34,31 @@ Then go to the ``Arepo-snap-util'' directory,
    $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
    
  we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,
- 
+
+.. code-block:: console
+
    $ module show gsl
 
 which will give the following information,
 
+.. code-block:: console
+
    $ -------------------------------------------------------------------
+   
    $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
 
    $ module-whatis    Enables usage of gsl 2.4
+
    $ prepend-path    PATH    /opt/gsl-2.4/bin
+
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
+
    $ -------------------------------------------------------------------
+
 The path to ``gsl`` is next to ``PATH``. Now add the following lines
 
+.. code-block:: console
    $ incl_dirs = ['/opt/gsl-2.4/include']
    $ libs_dirs = ['/opt/gsl-2.4/lib']^C
 
-before
+below ``#ADD PATH HERE`` in ``setup.py``
