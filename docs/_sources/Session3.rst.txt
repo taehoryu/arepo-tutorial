@@ -34,7 +34,7 @@ To use ``AREPO``, you don't need to install anything. What you need is proper en
    $ module load anaconda3 gsl
 
 2. Set the path to ``gsl``
------------------------
+---------------------------
 
 Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
 
