@@ -1,3 +1,4 @@
+.. _Session3:
 
 ************************************************************************************
 Session 3. Preparation - download, installation, and compilation
