@@ -118,6 +118,12 @@ $ prepend-path    PATH    /opt/gsl-2.4/bin
 $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
 $ ——————————————————————-</p>
 </div></blockquote>
+<p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now add the following lines</p>
+<blockquote>
+<div><p>$ incl_dirs = [‘/opt/gsl-2.4/include’]
+$ libs_dirs = [‘/opt/gsl-2.4/lib’]^C</p>
+</div></blockquote>
+<p>before</p>
 </section>
 </section>
 
