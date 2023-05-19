@@ -44,21 +44,16 @@ which will give the following information,
 .. code-block:: console
 
    $ -------------------------------------------------------------------
-   
    $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
-
    $ module-whatis    Enables usage of gsl 2.4
-
    $ prepend-path    PATH    /opt/gsl-2.4/bin
-
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
-
    $ -------------------------------------------------------------------
 
 The path to ``gsl`` is next to ``PATH``. Now add the following lines
 
 .. code-block:: console
    $ incl_dirs = ['/opt/gsl-2.4/include']
-   $ libs_dirs = ['/opt/gsl-2.4/lib']^C
+   $ libs_dirs = ['/opt/gsl-2.4/lib']
 
 below ``#ADD PATH HERE`` in ``setup.py``
