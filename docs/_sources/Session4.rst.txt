@@ -1,4 +1,4 @@
-
+.. _Session4:
 
 Session 4. Making initial condition files and compile
 ======================================================
