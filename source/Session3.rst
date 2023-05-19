@@ -57,7 +57,7 @@ The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util'' direc
 
    $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
 
- and add the following lines,
+and add the following lines,
 
 .. code-block:: python
 
@@ -82,3 +82,5 @@ If you do not see any errors and the installation ends with,
    $ customize UnixCCompiler
 
 you successfuly installed the package.
+
+
