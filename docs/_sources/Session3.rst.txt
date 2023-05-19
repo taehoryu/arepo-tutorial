@@ -24,7 +24,7 @@ Installation
 =============
 To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you follow several steps.
 
-Load modules
+1. Load modules
 ---------------
   
   Let's load a python modules,
@@ -33,7 +33,7 @@ Load modules
 
    $ module load anaconda3 gsl
 
-Set the path to ``gsl``
+2. Set the path to ``gsl``
 -----------------------
 
 Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
@@ -68,7 +68,7 @@ and add the following lines,
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
-Install the package
+3. Install the package
 -----------------------
 
 Finally, let's install with the following command,
@@ -90,4 +90,16 @@ Compilation
 =============
 Let's do the part that first-time users spent a long time on. As before, we will go through this step by step.
 
+1. load modules
+---------------
 
+We need several modules to compile and run AREPO. Let's load the following modules,
+
+.. code-block:: console
+
+   $ source /usr/common/appl/modules-tcl/init/sh
+   $ module purge
+   $ module load mpich/3.3.6
+   $ module load fftw-mpich/3.3.6
+   $ module load gsl
+   $ module load hdf5/1.8.18
