@@ -32,8 +32,8 @@ Then go to the ``Arepo-snap-util'' directory,
 .. code-block:: console
 
    $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
-   
- we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,
+
+we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,
 
 .. code-block:: console
 
