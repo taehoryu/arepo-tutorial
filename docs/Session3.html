@@ -118,22 +118,6 @@
 </pre></div>
 </div>
 <p>which will give the following information,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>-------------------------------------------------------------------
-<span class="gp">$ </span>/usr/common/share/modulefiles/MPA/libs/gsl/2.4:
-<span class="gp">$ </span>module-whatis<span class="w">    </span>Enables<span class="w"> </span>usage<span class="w"> </span>of<span class="w"> </span>gsl<span class="w"> </span><span class="m">2</span>.4
-<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>/opt/gsl-2.4/bin
-<span class="gp">$ </span>prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">    </span>/opt/gsl-2.4/lib
-<span class="gp">$ </span>-------------------------------------------------------------------
-</pre></div>
-</div>
-<p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now add the following lines,</p>
-<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>install the package</p></li>
-</ul>
-</div></blockquote>
-<p>Finally, let’s install with the following command,</p>
 </section>
 </section>
 
