@@ -10,7 +10,7 @@ In this session, we will prepare for the practice sessions. The codes that you w
 ``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data.
 
 Download
------------------------
+=========
 
 The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. So once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to my directory by now. If not, please let me know):
 
@@ -21,7 +21,7 @@ The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. So once you log 
    
 
 Installation
------------------------
+=============
 To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you follow several steps.
 
 1. Load modules.
