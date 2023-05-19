@@ -72,12 +72,6 @@ Finally, let's install with the following command,
 
 .. code-block:: console
 
-   $ python3 setup.py
-   $ module-whatis    Enables usage of gsl 2.4
-   $ prepend-path    PATH    /opt/gsl-2.4/bin
-   $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
-   $ -------------------------------------------------------------------
-
-
+   $ python3 setup.py install --user
 
 So
