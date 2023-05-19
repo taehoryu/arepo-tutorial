@@ -97,8 +97,16 @@
 <ol class="arabic simple" start="2">
 <li><p>installation</p></li>
 </ol>
-<p>To use <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you don’t need to install anything. What you need is proper environmental modules required for compiling and runnign <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations. However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python scripts. To install <a href="#id1"><span class="problematic" id="id2">``</span></a>Arepo-snap-util’’, you first need to load a python module,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
+<p>To use <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you don’t need to install anything. What you need is proper environmental modules required for compiling and runnign <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations. However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python scripts. To install <a href="#id1"><span class="problematic" id="id2">``</span></a>Arepo-snap-util’’, you follow several steps.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>load modules.</p></li>
+</ul>
+<p>Let’s load a python module,</p>
+</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
+
+<span class="go">- set the path to ``gsl``</span>
 </pre></div>
 </div>
 <p>Then go to the <a href="#id3"><span class="problematic" id="id4">``</span></a>Arepo-snap-util’’ directory,</p>
@@ -120,6 +128,11 @@
 </div>
 <p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now add the following lines</p>
 <p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
+<blockquote>
+<div><ul class="simple">
+<li></li>
+</ul>
+</div></blockquote>
 </section>
 </section>
 

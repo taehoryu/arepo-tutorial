@@ -21,12 +21,18 @@ The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. So once you log 
 
 2) installation
 
-To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you first need to load a python module,
+To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you follow several steps.
+
+  - load modules.
+  
+  Let's load a python module,
 
 .. code-block:: console
 
    $ module load anaconda3 gsl
 
+  - set the path to ``gsl``
+  
 Then go to the ``Arepo-snap-util'' directory,
 
 .. code-block:: console
@@ -57,3 +63,5 @@ The path to ``gsl`` is next to ``PATH``. Now add the following lines
    $ libs_dirs = ['/opt/gsl-2.4/lib']
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
+
+  - 
