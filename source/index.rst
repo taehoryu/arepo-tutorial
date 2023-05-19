@@ -20,3 +20,4 @@ text
    Session5
    Session6
    Session7
+   Session8
