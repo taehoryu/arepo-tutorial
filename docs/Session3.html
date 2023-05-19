@@ -102,9 +102,18 @@
 </pre></div>
 </div>
 <p>Then go to the <a href="#id3"><span class="problematic" id="id4">``</span></a>Arepo-snap-util’’ directory,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">  $ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
+
+<span class="go">we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,</span>
+
+<span class="gp">  $ </span>module<span class="w"> </span>show<span class="w"> </span>gsl
 </pre></div>
 </div>
+<p>which will give the following information,</p>
+<p>module-whatis    Enables usage of gsl 2.4
+prepend-path    PATH    /opt/gsl-2.4/bin
+prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
+——————————————————————-</p>
 </section>
 </section>
 
