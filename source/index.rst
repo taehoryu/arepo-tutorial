@@ -19,3 +19,4 @@ text
    Session4
    Session5
    Session6
+   Session7

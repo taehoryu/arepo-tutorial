@@ -1,7 +1,7 @@
 .. _Session3:
 
 ************************************************************************************
-Session 3. Preparation - download, installation, and compilation
+Session 3. Preparation - download and installation
 ************************************************************************************
 
 Overview
@@ -115,14 +115,6 @@ To successfully compile almost every hydrodynamics code, it is very important to
 
 One convenient way is to add the line to your bash file (``~/.bashrc``) and do ``source ~/.bashrc`` instead of typing the line above.
 
-3. Compile
----------------
-
-To compile, you first go to the ``AREPO`` directory,
-
-.. code-block:: console
-
-   $ cd /afs/mpa/temp/<path_to_your_directory>/AREPO/
    
 
 

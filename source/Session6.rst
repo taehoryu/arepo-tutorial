@@ -1,4 +1,4 @@
 
 
-Session 6. Practice 2 - relaxation of main-sequence star
-========================================================
+Session 6. Practice 1 - shock-tube
+==================================

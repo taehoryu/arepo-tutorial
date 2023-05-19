@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Session 3. Preparation - download, installation, and compilation &mdash; AREPO tutorial  documentation</title>
+  <title>Session 3. Preparation - download and installation &mdash; AREPO tutorial  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Session 4. Running simulation and analyzing data" href="Session4.html" />
+    <link rel="next" title="Session 4. Making initial condition files and compile" href="Session4.html" />
     <link rel="prev" title="Session 2. Introduction to AREPO" href="Session2.html" /> 
 </head>
 
@@ -47,7 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Schedule.html">Schedules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session1.html">Session 1. Introduction to hydrodynamics simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Session 3. Preparation - download, installation, and compilation</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Session 3. Preparation - download and installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
@@ -59,14 +59,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#compilation">Compilation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id5">1. Load modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-systype">2. Set SYSTYPE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compile">3. Compile</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Running simulation and analyzing data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Practice 1 - shock-tube</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 2 - relaxation of main-sequence star</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Making initial condition files and compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 1 - shock-tube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of main-sequence star</a></li>
 </ul>
 
         </div>
@@ -83,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Session 3. Preparation - download, installation, and compilation</li>
+      <li class="breadcrumb-item active">Session 3. Preparation - download and installation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Session3.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,8 +93,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="session-3-preparation-download-installation-and-compilation">
-<span id="session3"></span><h1>Session 3. Preparation - download, installation, and compilation<a class="headerlink" href="#session-3-preparation-download-installation-and-compilation" title="Permalink to this heading"></a></h1>
+  <section id="session-3-preparation-download-and-installation">
+<span id="session3"></span><h1>Session 3. Preparation - download and installation<a class="headerlink" href="#session-3-preparation-download-and-installation" title="Permalink to this heading"></a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In this session, we will prepare for the practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
@@ -183,13 +183,6 @@
 </div>
 <p>One convenient way is to add the line to your bash file (<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>) and do <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code> instead of typing the line above.</p>
 </section>
-<section id="compile">
-<h3>3. Compile<a class="headerlink" href="#compile" title="Permalink to this heading"></a></h3>
-<p>To compile, you first go to the <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> directory,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/AREPO/
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -198,7 +191,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Session2.html" class="btn btn-neutral float-left" title="Session 2. Introduction to AREPO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Session4.html" class="btn btn-neutral float-right" title="Session 4. Running simulation and analyzing data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Session4.html" class="btn btn-neutral float-right" title="Session 4. Making initial condition files and compile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

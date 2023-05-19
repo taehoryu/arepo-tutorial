@@ -1,0 +1,4 @@
+
+
+Session 7. Practice 2 - relaxation of main-sequence star
+========================================================
