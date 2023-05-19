@@ -68,8 +68,9 @@ and add the following lines,
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
-3. Install the package
-  
+Install the package
+-----------------------
+
 Finally, let's install with the following command,
 
 .. code-block:: console
