@@ -58,7 +58,7 @@ which will give the following information,
 
 The path to ``gsl`` is next to ``PATH``. Now add the following lines,
 
-.. code-block:: python3
+.. code-block:: python
    incl_dirs = ['/opt/gsl-2.4/include']
    libs_dirs = ['/opt/gsl-2.4/lib']
 
