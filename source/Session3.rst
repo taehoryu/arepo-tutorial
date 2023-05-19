@@ -79,3 +79,5 @@ If you do not see any errors and the installation ends with,
 
    $ running install_clib
    $ customize UnixCCompiler
+
+you successfuly installed the package.
