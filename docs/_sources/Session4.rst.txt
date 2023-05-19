@@ -9,6 +9,7 @@ Session 4. Making initial condition files and compile
 1. Make initial condition files
 ======================================================
 
+For each physics problem that you want to study using AREPO, you have to create an initial condition files which describes the initial state of the system that you are interested in. To compile the code, you need `Config.sh` file which contains necessary configurations. For example, 
 
 
 2. Compilation
