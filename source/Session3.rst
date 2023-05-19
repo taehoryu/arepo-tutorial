@@ -39,10 +39,10 @@ Then go to the ``Arepo-snap-util'' directory,
 
 which will give the following information,
 
--------------------------------------------------------------------
-/usr/common/share/modulefiles/MPA/libs/gsl/2.4:
+   $ -------------------------------------------------------------------
+   $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
 
-module-whatis    Enables usage of gsl 2.4
-prepend-path    PATH    /opt/gsl-2.4/bin
-prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
--------------------------------------------------------------------
+   $ module-whatis    Enables usage of gsl 2.4
+   $ prepend-path    PATH    /opt/gsl-2.4/bin
+   $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
+   $ -------------------------------------------------------------------
