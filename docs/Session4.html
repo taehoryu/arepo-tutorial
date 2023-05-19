@@ -50,7 +50,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Session3.html">Session 3. Preparation - download and installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 4. Making initial condition files and compile</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#make-initial-condition-files">1. Make initial condition files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compile">2. Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compilation">2. Compilation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#load-modules">1. Load modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-systype">2. Set SYSTYPE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile">3. Compile</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
@@ -87,12 +92,36 @@
 <section id="make-initial-condition-files">
 <h2>1. Make initial condition files<a class="headerlink" href="#make-initial-condition-files" title="Permalink to this heading"></a></h2>
 </section>
+<section id="compilation">
+<h2>2. Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading"></a></h2>
+<p>Let’s do the part that first-time users spent a long time on. As before, we will go through this step by step.</p>
+<section id="load-modules">
+<h3>1. Load modules<a class="headerlink" href="#load-modules" title="Permalink to this heading"></a></h3>
+<p>We need several modules to compile and run AREPO. Let’s load the following modules,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>/usr/common/appl/modules-tcl/init/sh
+<span class="gp">$ </span>module<span class="w"> </span>purge
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>fftw-mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>gsl
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.8.18
+</pre></div>
+</div>
+</section>
+<section id="set-systype">
+<h3>2. Set SYSTYPE<a class="headerlink" href="#set-systype" title="Permalink to this heading"></a></h3>
+<p>To successfully compile almost every hydrodynamics code, it is very important to set the paths to the dependences (e.g., those modules we just loaded) inside the code. As mentioned above, because the paths to the modules are different for dffierent machines, you have to set the paths for each machine you are using. Every code has a different file in which you need to set the paths. The file for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> is <code class="docutils literal notranslate"><span class="pre">makefiles/systypes.make</span></code>. Fortunately, the system setup for the mpa cluster, raven, cobra, and freya were already set! All you need to do is to make sure that you tell the code correctly which system you are on. You can set the system type by,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">SYSTYPE</span><span class="o">=</span>pascal
+</pre></div>
+</div>
+<p>One convenient way is to add the line to your bash file (<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>) and do <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code> instead of typing the line above.</p>
+</section>
 <section id="compile">
-<h2>2. Compile<a class="headerlink" href="#compile" title="Permalink to this heading"></a></h2>
+<h3>3. Compile<a class="headerlink" href="#compile" title="Permalink to this heading"></a></h3>
 <p>We need a test case for which compile the code. To compile, you first go to the <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> directory,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/AREPO/
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 
