@@ -71,3 +71,4 @@ below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs
 Finally, let's install with the following command,
 
 .. code-block:: console
+    $ python3 setup.py install --user
