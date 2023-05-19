@@ -76,7 +76,7 @@ Finally, let's install with the following command,
 
 If you do not see any errors and the installation ends with,
 
-.. code-blck:: console
+.. code-block:: console
 
    $ running install_clib
    $ customize UnixCCompiler
