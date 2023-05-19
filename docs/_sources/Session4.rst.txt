@@ -1,7 +1,7 @@
 
 
 Session 4. Making initial condition files and compile
-================================================
+======================================================
 
 1. Make initial condition files
 -------------------------------
