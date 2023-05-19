@@ -72,3 +72,6 @@ Finally, let's install with the following command,
 
 .. code-block:: console
    $ /usr/
+
+
+So
