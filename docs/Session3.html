@@ -48,7 +48,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Session1.html">Session 1. Introduction to hydrodynamics simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 3. Preparation - download, installation, and compilation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Running simulation and analyzing data</a></li>
@@ -86,29 +90,29 @@
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In this session, we will prepare for the practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
 <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> are an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data.</p>
-<ol class="arabic simple">
-<li><p>download</p></li>
-</ol>
+<section id="download">
+<h3>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h3>
 <p>The codes are stored in <code class="docutils literal notranslate"><span class="pre">/afs/mpa/temp/tryu/AREPO_tutorial/</span></code>. So once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to my directory by now. If not, please let me know):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/tryu/AREPO_tutorial/
 <span class="gp">$ </span>cp<span class="w"> </span>-r<span class="w"> </span>*<span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>installation</p></li>
-</ol>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h3>
 <p>To use <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you don’t need to install anything. What you need is proper environmental modules required for compiling and runnign <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations. However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python scripts. To install <a href="#id1"><span class="problematic" id="id2">``</span></a>Arepo-snap-util’’, you follow several steps.</p>
+<ol class="arabic simple">
+<li><p>Load modules.</p></li>
+</ol>
 <blockquote>
-<div><ul class="simple">
-<li><p>load modules.</p></li>
-</ul>
-<p>Let’s load a python module,</p>
+<div><p>Let’s load a python module,</p>
 </div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
-
-<span class="go">- set the path to ``gsl``</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
 </pre></div>
 </div>
+<ol class="arabic simple" start="2">
+<li><p>Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code></p></li>
+</ol>
 <p>Then go to the <a href="#id3"><span class="problematic" id="id4">``</span></a>Arepo-snap-util’’ directory,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
 </pre></div>
@@ -132,12 +136,11 @@
 </pre></div>
 </div>
 <p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>install the package</p></li>
-</ul>
-</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Install the package</p></li>
+</ol>
 <p>Finally, let’s install with the following command,</p>
+</section>
 </section>
 </section>
 
