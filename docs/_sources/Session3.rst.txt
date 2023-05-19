@@ -55,3 +55,10 @@ which will give the following information,
    $ prepend-path    PATH    /opt/gsl-2.4/bin
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
    $ -------------------------------------------------------------------
+
+The path to ``gsl`` is next to ``PATH``. Now add the following lines,
+
+.. code-block:: python
+
+   incl_dirs = ['/opt/gsl-2.4/include']
+   libs_dirs = ['/opt/gsl-2.4/lib']
