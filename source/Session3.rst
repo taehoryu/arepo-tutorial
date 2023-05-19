@@ -11,9 +11,13 @@ Arepo-snap-util are an analysis package designed and developed for AREPO simulat
 
 1) download the codes
 
-The codes are stored in `/afs/mpa/temp/tryu/AREPO_tutorial/`. So once you log onto the mpa cluster, you can see the codes when you go to the directory:
+The codes are stored in `/afs/mpa/temp/tryu/AREPO_tutorial/`. So once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to my directory by now. If not, please let me know):
 
 .. code-block:: console
 
    $ cd /afs/mpa/temp/tryu/AREPO_tutorial/
+   $ cp -r * /afs/mpa/temp/<path_to_your_directory>/
+   
+
+
 
