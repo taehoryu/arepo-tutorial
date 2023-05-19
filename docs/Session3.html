@@ -51,8 +51,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#load-modules">1. Load modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-the-path-to-gsl">2. Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-modules-mpa">1. Load modules [MPA]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-the-path-to-gsl-mpa">2. Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code>  [MPA]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-the-package">3. Install the package</a></li>
 </ul>
 </li>
@@ -93,7 +93,7 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In this session, we will prepare for the practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
-<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> are an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster (except for directory paths) with :red:MPA.</p>
+<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> are an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate sections containing something only specific for the MPA cluster (except for directory paths) with [MPA].</p>
 </section>
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
@@ -106,17 +106,17 @@
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>To use <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you don’t need to install anything. What you need is proper environmental modules required for compiling and runnign <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations. However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python scripts. To install <a href="#id1"><span class="problematic" id="id2">``</span></a>Arepo-snap-util’’, you follow several steps.</p>
-<section id="load-modules">
-<h3>1. Load modules<a class="headerlink" href="#load-modules" title="Permalink to this heading"></a></h3>
+<section id="load-modules-mpa">
+<h3>1. Load modules [MPA]<a class="headerlink" href="#load-modules-mpa" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>Let’s load a python modules,</p>
 </div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl<span class="w"> </span><span class="o">(</span>:red:MPA<span class="o">)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
 </pre></div>
 </div>
 </section>
-<section id="set-the-path-to-gsl">
-<h3>2. Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code><a class="headerlink" href="#set-the-path-to-gsl" title="Permalink to this heading"></a></h3>
+<section id="set-the-path-to-gsl-mpa">
+<h3>2. Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code>  [MPA]<a class="headerlink" href="#set-the-path-to-gsl-mpa" title="Permalink to this heading"></a></h3>
 <p>Then we need to set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> module in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. Let’s first find out the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code>. You can see the path to the module with the following line,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>show<span class="w"> </span>gsl
 </pre></div>

@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 In this session, we will prepare for the practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate something only specific for the MPA cluster (except for directory paths) with :red:MPA.
+``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate sections containing something only specific for the MPA cluster (except for directory paths) with [MPA].
 
 Download
 =========
@@ -24,16 +24,16 @@ Installation
 =============
 To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you follow several steps.
 
-1. Load modules
+1. Load modules [MPA]
 ---------------
   
   Let's load a python modules,
 
 .. code-block:: console
 
-   $ module load anaconda3 gsl (:red:MPA)
+   $ module load anaconda3 gsl
 
-2. Set the path to ``gsl``
+2. Set the path to ``gsl``  [MPA]
 ---------------------------
 
 Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
