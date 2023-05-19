@@ -105,7 +105,7 @@
 <li><p>Load modules.</p></li>
 </ol>
 <blockquote>
-<div><p>Let’s load a python module,</p>
+<div><p>Let’s load a python modules,</p>
 </div></blockquote>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
 </pre></div>
@@ -113,11 +113,7 @@
 <ol class="arabic simple" start="2">
 <li><p>Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code></p></li>
 </ol>
-<p>Then go to the <a href="#id3"><span class="problematic" id="id4">``</span></a>Arepo-snap-util’’ directory,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
-</pre></div>
-</div>
-<p>we need to set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> module in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. You can see the path to the module with the following line,</p>
+<p>Then we need to set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> module in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. Let’s first find out the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code>. You can see the path to the module with the following line,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>show<span class="w"> </span>gsl
 </pre></div>
 </div>
@@ -130,12 +126,17 @@
 <span class="gp">$ </span>-------------------------------------------------------------------
 </pre></div>
 </div>
-<p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now add the following lines,</p>
+<p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now go to the <a href="#id3"><span class="problematic" id="id4">``</span></a>Arepo-snap-util’’ directory,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">  $ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
+
+<span class="go">and add the following lines,</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/include&#39;</span><span class="p">]</span>
 <span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/lib&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
+<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run AREPO on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
 <ol class="arabic simple" start="3">
 <li><p>Install the package</p></li>
 </ol>
@@ -143,12 +144,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>setup.py<span class="w"> </span>install<span class="w"> </span>--user
 </pre></div>
 </div>
-<p>If you do not see any errors and the installation ends with,
-.. code-blck:: consolr</p>
-<blockquote>
-<div><p>$ running install_clib
-$ customize UnixCCompiler</p>
-</div></blockquote>
+<p>If you do not see any errors and the installation ends with,</p>
 <p>you successfuly installed the package.</p>
 </section>
 </section>

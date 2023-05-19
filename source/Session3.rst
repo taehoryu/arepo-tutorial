@@ -26,7 +26,7 @@ To use ``AREPO``, you don't need to install anything. What you need is proper en
 
 1. Load modules.
   
-  Let's load a python module,
+  Let's load a python modules,
 
 .. code-block:: console
 
@@ -34,13 +34,7 @@ To use ``AREPO``, you don't need to install anything. What you need is proper en
 
 2. Set the path to ``gsl``
   
-Then go to the ``Arepo-snap-util'' directory,
-
-.. code-block:: console
-
-   $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
-
-we need to set the path to ``gsl`` module in ``setup.py``. You can see the path to the module with the following line,
+Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
 
 .. code-block:: console
 
@@ -57,14 +51,20 @@ which will give the following information,
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
    $ -------------------------------------------------------------------
 
-The path to ``gsl`` is next to ``PATH``. Now add the following lines,
+The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util'' directory,
+
+.. code-block:: console
+
+   $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
+
+ and add the following lines,
 
 .. code-block:: python
 
    incl_dirs = ['/opt/gsl-2.4/include']
    libs_dirs = ['/opt/gsl-2.4/lib']
 
-below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and want to analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
+below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
 3. Install the package
   
@@ -75,7 +75,8 @@ Finally, let's install with the following command,
    $ python3 setup.py install --user
 
 If you do not see any errors and the installation ends with,
-.. code-blck:: consolr
+
+.. code-blck:: console
 
    $ running install_clib
    $ customize UnixCCompiler
