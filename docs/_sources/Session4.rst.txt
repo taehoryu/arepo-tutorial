@@ -26,7 +26,7 @@ For some hydrodynamics codes, a file that creates the initial setup for a simula
 
 2. create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script which creates the initial conditions and put them in a stage directory for different simulations.
 
-
+We will prepare the initial conditions for the shock tube test as the first exercise.
 
 2. Compilation
 ======================================================
