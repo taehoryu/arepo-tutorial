@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 In this session, we will prepare for practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [MPA].
+``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [*MPA].
 
 Download
 =========
@@ -22,21 +22,23 @@ The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. Once you log ont
 
 Installation
 =============
-To use ``AREPO``, you don't need to install anything. What you need is proper environmental modules required for compiling and runnign ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the code. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. To install ``Arepo-snap-util'', you follow several steps.
+To run ``AREPO``, you would need to install several programs (e.g., hdf5, mpi, and so on). However, all those required programs are installed on the MPA cluster. All you need to do is load proper environmental modules required for compiling and running ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the analysis package. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. Let's install ``Arepo-snap-util`` by following the follow steps.
 
-1. Load modules [MPA]
+1. Load modules
 ---------------
   
-  Let's load a python modules,
+  Let's load a python module,
 
 .. code-block:: console
 
    $ module load anaconda3 gsl
 
-2. Set the path to ``gsl``  [MPA]
+[*MPA]
+
+2. Set the path to ``gsl``
 ---------------------------
 
-Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
+We need to set the path to the ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl`` by using the following line,
 
 .. code-block:: console
 
@@ -53,6 +55,8 @@ which will give the following information,
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
    $ -------------------------------------------------------------------
 
+[*MPA]
+ 
 The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util'' directory,
 
 .. code-block:: console
@@ -63,8 +67,10 @@ and add the following lines,
 
 .. code-block:: python
 
-   incl_dirs = ['/opt/gsl-2.4/include'] (:red:MPA)
-   libs_dirs = ['/opt/gsl-2.4/lib'] (:red:MPA)
+   incl_dirs = ['/opt/gsl-2.4/include']
+   libs_dirs = ['/opt/gsl-2.4/lib']
+   
+[*MPA]
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run AREPO on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
