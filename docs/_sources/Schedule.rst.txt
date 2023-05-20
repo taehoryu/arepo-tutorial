@@ -1,6 +1,6 @@
 
 
-Schedules
+Schedule
 ============
 
 - 9:00  - 9:30  Session 1. Brief introduction of hydrodynamics simulation
