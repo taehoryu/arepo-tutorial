@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session3.html">Session 3. Preparation - download and installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 4. Making initial condition files and compile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#make-initial-condition-files">1. Make initial condition files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#compilation">2. Compilation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#load-modules">1. Load modules</a></li>
@@ -90,9 +91,19 @@
              
   <section id="session-4-making-initial-condition-files-and-compile">
 <span id="session4"></span><h1>Session 4. Making initial condition files and compile<a class="headerlink" href="#session-4-making-initial-condition-files-and-compile" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>For each physics problem that you want to study using AREPO, we need to have several files in your stage directory where you run simulations.</p>
+<ol class="arabic simple">
+<li><p>Initial condition file (<code class="docutils literal notranslate"><span class="pre">*.hdf5</span></code>): This file describes the initial state of the system that you are interested in</p></li>
+<li><p>Parameter file (<code class="docutils literal notranslate"><span class="pre">param.txt</span></code>): This file contains the values of parameters needed to simulate the system.</p></li>
+<li><p>Configuration file (<code class="docutils literal notranslate"><span class="pre">Config.sh</span></code>): This file contains necessary configurations, which will be used to compile the code.</p></li>
+<li><p>Additional files: this file includes other files that you may or may not need, depending on the problems, such as pre-tabulated table for Helmholtz equation of state.</p></li>
+</ol>
+</section>
 <section id="make-initial-condition-files">
 <h2>1. Make initial condition files<a class="headerlink" href="#make-initial-condition-files" title="Permalink to this heading"></a></h2>
-<p>For each physics problem that you want to study using AREPO, you have to create an initial condition file (<code class="docutils literal notranslate"><span class="pre">*.hdf5</span></code>) which describes the initial state of the system that you are interested in and a parameter file (<code class="docutils literal notranslate"><span class="pre">param.txt</span></code>). In addition, to compile the code, you need <code class="docutils literal notranslate"><span class="pre">Config.sh</span></code> which contains necessary configurations. For example,</p>
+<p>F</p>
 </section>
 <section id="compilation">
 <h2>2. Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading"></a></h2>
