@@ -55,7 +55,7 @@ which will give the following information,
    $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
    $ -------------------------------------------------------------------
 
-The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util'' directory,
+The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util`` directory,
 
 .. code-block:: console
 
