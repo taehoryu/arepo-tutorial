@@ -9,12 +9,12 @@ Session 4. Making initial condition files and compile
 1. Make initial condition files
 ======================================================
 
-For each physics problem that you want to study using AREPO, you have to create initial condition file (``*.hdf5``) which describe the initial state of the system that you are interested in and parameter files (``param.txt``). In addition, to compile the code, you need ``Config.sh`` file which contains necessary configurations. For example, 
+For each physics problem that you want to study using AREPO, you have to create an initial condition file (``*.hdf5``) which describes the initial state of the system that you are interested in and a parameter file (``param.txt``). In addition, to compile the code, you need ``Config.sh`` which contains necessary configurations. For example,
 
 
 2. Compilation
 ======================================================
-Let's do the part that first-time users spent a long time on. As before, we will go through this step by step.
+Let's do the part that first-time users spend a long time on. As before, we will go through this step by step.
 
 1. Load modules
 ---------------
