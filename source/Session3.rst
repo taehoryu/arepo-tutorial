@@ -35,7 +35,7 @@ To run ``AREPO``, you would need to install several programs (e.g., hdf5, mpi, a
 
  [*MPA]
 
-2. Set the path to ``gsl``  [MPA]
+2. Set the path to ``gsl``
 ---------------------------
 
 Then we need to set the path to ``gsl`` module in ``setup.py``. Let's first find out the path to ``gsl``. You can see the path to the module with the following line,
