@@ -83,6 +83,7 @@ If you do not see any errors and the installation ends with,
 
 .. code-block:: console
 
+   $ ...
    $ running install_clib
    $ customize UnixCCompiler
 
