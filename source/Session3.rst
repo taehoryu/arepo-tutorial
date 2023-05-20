@@ -6,13 +6,13 @@ Session 3. Preparation - download and installation
 
 Overview
 ================================================================
-In this session, we will prepare for the practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` are an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. The some of the steps enumerated here are different depending on which machines you are on. I will indicate sections containing something only specific for the MPA cluster (except for directory paths) with [MPA].
+In this session, we will prepare for practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
+``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [MPA].
 
 Download
 =========
 
-The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. So once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to my directory by now. If not, please let me know):
+The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):
 
 .. code-block:: console
 
