@@ -10,7 +10,6 @@ Session 2. Introduction to AREPO
 
 
 
-
 2. Mesh construction
 -------------------------
 
@@ -20,3 +19,9 @@ Session 2. Introduction to AREPO
 
 3. Gravity calculation - Softening
 ----------------------------------
+
+
+
+4. AREPO code structure
+-------------------------
+
