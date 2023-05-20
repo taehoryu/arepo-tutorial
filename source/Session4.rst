@@ -16,10 +16,17 @@ For each physics problem that you want to study using AREPO, we need to have sev
 
 This session comprises of two sub-sessions. In the first sub-session (``1. Make initial condition files``), we will make all those initial condition files and in the second sub-session (``2. Compilation``), we will compile the code.
 
+
 1. Make initial condition files
 ======================================================
 
-F
+For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. However, ``AREPO`` takes another way in which the initial condition files are made separately before running simulations and once you run the code, the code reads the initial condition files and generates the initial setup (e.g., domain size, mass distribution, and so on) in the domian. So for users, there are mainly two ways to proceed,
+
+1. create initial condition files and run simulations in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
+
+2. create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script which creates the initial conditions and put them in a stage directory for different simulations.
+
+
 
 2. Compilation
 ======================================================
