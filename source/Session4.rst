@@ -66,3 +66,7 @@ We need a test case for which compile the code. To compile, you first go to the 
 .. code-block:: console
 
    $ cd /afs/mpa/temp/<path_to_your_directory>/AREPO/
+
+
+3. Restart
+======================================================
