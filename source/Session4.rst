@@ -7,12 +7,14 @@ Session 4. Making initial condition files and compile
 1. Overview
 ======================================================
 
-For each physics problem that you want to study using AREPO, we need to have several files in your stage directory where you run simulations.
+For each physics problem that you want to study using AREPO, you need to have several files in your stage directory where you run simulations.
 
 1. Initial condition file (``*.hdf5``): This file describes the initial state of the system that you are interested in
 2. Parameter file (``param.txt``): This file contains the values of parameters needed to simulate the system.
-3. Configuration file (``Config.sh``): This file contains necessary configurations, which will be used to compile the code.
+3. Configuration file (``Config.sh``): This file contains necessary configurations.
 4. Additional files: this files include those that are specific to the problems, such as a file contatining a pre-tabulated table for Helmholtz equation of state.
+
+``Config.sh`` is the only file you need to compile the code. To run the code, you need the initial condition file, parameter file, and additional files (if necessary). From now on, all the files (``*.hdf5``, ``param.txt``, ``Config.sh``) will be collectively denoted as ''initial condition files``.
 
 This session comprises of two sub-sessions. In the first sub-session (``1. Make initial condition files``), we will make all those initial condition files and in the second sub-session (``2. Compilation``), we will compile the code.
 
@@ -20,11 +22,11 @@ This session comprises of two sub-sessions. In the first sub-session (``1. Make 
 1. Make initial condition files
 ======================================================
 
-For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. However, ``AREPO`` takes another way in which the initial condition files are made separately before running simulations and once you run the code, the code reads the initial condition files and generates the initial setup (e.g., domain size, mass distribution, and so on) in the domian. So for users, there are mainly two ways to proceed,
+For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. However, ``AREPO`` takes another way in which the initial condition files are made separately before running simulations and once you run the code, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian. So there are mainly two ways to proceed,
 
 1. create initial condition files and run simulations in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
 
-2. create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script which creates the initial conditions and put them in a stage directory for different simulations.
+2. create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be convenient to write a python script which creates the initial conditions and puts them in a stage directory for each simulation.
 
 We will prepare the initial conditions for the shock tube test as the first exercise.
 
