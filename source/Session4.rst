@@ -99,7 +99,7 @@ If you increase the compilation speed by using multiple cores, you can add ``-j5
    $ ...... -L/opt/hdf5-1.8.18/lib -lhdf5 -Xlinker -R -Xlinker /opt/hdf5-1.8.18/lib -lmpi -lgsl -lgsl -lgslcblas   -lgmp               -o run/Shock_tube/Arepo
    $ Checking ./run/Shock_tube/build/Template-Config.sh.check and ./run/Shock_tube/build/defines_extra.check for duplicate options
 
-you are ready to run!
+you should see an executable ``Arepo``. Now you are ready to run!
 
 3. Restart
 ======================================================
