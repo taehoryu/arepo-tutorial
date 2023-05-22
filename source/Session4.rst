@@ -30,18 +30,22 @@ For some hydrodynamics codes, a file that creates the initial setup for a simula
 
 Of course, these are not the only ways. Users can develope their own workflow.
 
-We will proceed this tutorial using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``. A python script for generating the initial condition file (``create.py``), a sample parameter file, and a configuration file (Config.sh) are already included in the directory.
+We will proceed this tutorial using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``.
 
 1) Create initial condition file
 ---------------------------------
 
+A python script for generating the initial condition file (``create.py``) is included in the directory. Detailed explanations will be given in the session.
+
 2) Create parameter file
 -------------------------
+
+A sample parameter file is included in the directory. Detailed explanations will be given in the session.
 
 3) Create configuration file
 -----------------------------
 
-
+A configuration file (Config.sh) is included in the directory. Detailed explanations will be given in the session.
 
 2. Compilation
 ======================================================
