@@ -92,9 +92,13 @@ We will compile the code with the configuration file for the shock tube test wit
 
    $ make CONFIG=./run/Shock_tube/Config.sh BUILD_DIR=./run/Shock_tube/build EXEC=./run/Shock_tube/Arepo
    
-If you increase the compilation speed by using multiple cores, you can add ``-j5`` (if you use 5 cpus) at the end of the line.
+If you increase the compilation speed by using multiple cores, you can add ``-j5`` (if you use 5 cpus) at the end of the line. If you do not see any errors and the compilation ends with the following lines,
 
+.. code-block:: console
+   $ ...... -L/opt/hdf5-1.8.18/lib -lhdf5 -Xlinker -R -Xlinker /opt/hdf5-1.8.18/lib -lmpi -lgsl -lgsl -lgslcblas   -lgmp               -o run/Shock_tube/Arepo
+   $ Checking ./run/Shock_tube/build/Template-Config.sh.check and ./run/Shock_tube/build/defines_extra.check for duplicate options
 
+you are ready to run!
 
 3. Restart
 ======================================================
