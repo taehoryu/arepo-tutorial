@@ -85,6 +85,15 @@ We need a test case for which compile the code. To compile, you first go to the 
 .. code-block:: console
 
    $ cd /afs/mpa/temp/<path_to_your_directory>/AREPO/
+   
+We will compile the code with the configuration file for the shock tube test with the following command,
+
+.. code-block:: console
+
+   $ make CONFIG=./run/Shock_tube/Config.sh BUILD_DIR=./run/Shock_tube/build EXEC=./run/Shock_tube/Arepo
+   
+If you increase the compilation speed by using multiple cores, you can add ``-j5`` (if you use 5 cpus) at the end of the line.
+
 
 
 3. Restart

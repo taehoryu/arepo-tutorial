@@ -160,6 +160,11 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/AREPO/
 </pre></div>
 </div>
+<p>We will compile the code with the configuration file for the shock tube test with the following command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make<span class="w"> </span><span class="nv">CONFIG</span><span class="o">=</span>./run/Shock_tube/Config.sh<span class="w"> </span><span class="nv">BUILD_DIR</span><span class="o">=</span>./run/Shock_tube/build<span class="w"> </span><span class="nv">EXEC</span><span class="o">=</span>./run/Shock_tube/Arepo
+</pre></div>
+</div>
+<p>If you increase the compilation speed by using multiple cores, you can add <code class="docutils literal notranslate"><span class="pre">-j5</span></code> (if you use 5 cpus) at the end of the line.</p>
 </section>
 </section>
 <section id="restart">
