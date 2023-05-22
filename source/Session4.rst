@@ -33,6 +33,14 @@ Of course, these are not the only ways. Users can develope their own workflow.
 We will proceed this tutorial using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``
 
 1) Create initial condition file
+---------------------------------
+
+2) Create parameter file
+-------------------------
+
+3) Create configuration file
+-----------------------------
+
 
 A python script for generating the initial condition file (``create.py``), a sample parameter file, and a configuration file (Config.sh) are already included in the directory.
 
@@ -85,4 +93,4 @@ A few tips that are good to know.
 
 1. The AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin when you make an initial condition file.
 
-2. To comment out in the parameter file, use ``%``. However, use ``#`` to comment out in the configuration file. 
+2. To comment out in the parameter file, use ``%``. However, use ``#`` to comment out in the configuration file.
