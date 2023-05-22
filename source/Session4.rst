@@ -26,13 +26,15 @@ For some hydrodynamics codes, a file that creates the initial setup for a simula
 
 1. create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
 
-2. create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be convenient to write a python script which creates the initial conditions and puts them in a stage directory for each simulation.
+2. create initial condition files in one directory and run the simulation in a separate directory (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient not only to write a python script which creates the initial conditions, but also puts them in a stage directory for each simulation.
 
 Of course, these are not the only ways. Users can develope their own workflow.
 
 We will proceed this tutorial using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``
 
 1) Create initial condition file
+
+A python script for generating the initial condition file is already included in the directory (``create.py``)
 
 2. Compilation
 ======================================================

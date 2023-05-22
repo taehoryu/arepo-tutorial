@@ -109,13 +109,14 @@
 <p>For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using AREPO are,</p>
 <ol class="arabic simple">
 <li><p>create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.</p></li>
-<li><p>create initial condition files in one directory and run simulations in separate directories (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be convenient to write a python script which creates the initial conditions and puts them in a stage directory for each simulation.</p></li>
+<li><p>create initial condition files in one directory and run the simulation in a separate directory (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient not only to write a python script which creates the initial conditions, but also puts them in a stage directory for each simulation.</p></li>
 </ol>
 <p>Of course, these are not the only ways. Users can develope their own workflow.</p>
 <p>We will proceed this tutorial using the shock tube test as the first exercise, which is located in <code class="docutils literal notranslate"><span class="pre">&lt;AREPO_directory&gt;/run/Shock_tube</span></code></p>
 <ol class="arabic simple">
 <li><p>Create initial condition file</p></li>
 </ol>
+<p>A python script for generating the initial condition file is already included in the directory (<code class="docutils literal notranslate"><span class="pre">create.py</span></code>)</p>
 </section>
 <section id="compilation">
 <h2>2. Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading"></a></h2>
