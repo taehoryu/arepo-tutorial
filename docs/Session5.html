@@ -87,6 +87,19 @@
 <span id="session5"></span><h1>Session 5. Running simulation and analyzing data<a class="headerlink" href="#session-5-running-simulation-and-analyzing-data" title="Permalink to this heading"></a></h1>
 <section id="running-simulation">
 <h2>1. Running simulation<a class="headerlink" href="#running-simulation" title="Permalink to this heading"></a></h2>
+<p>Let’s run the simulation for the shock tube test. Make sure that you still have the same environmental modules loaded as you did to compile. Because the domain is 1D, only single cpu is allowed to use. Let’s run using the following line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>./Arepo<span class="w"> </span>param.txt
+</pre></div>
+</div>
+<p>If the simulation begins properly, you should see this AREPO logo,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$    </span>__<span class="w">    </span>____<span class="w">  </span>____<span class="w">  </span>____<span class="w">  </span>_____
+<span class="gp">$   </span>/__<span class="se">\ </span><span class="w"> </span><span class="o">(</span><span class="w">  </span>_<span class="w"> </span><span class="se">\(</span><span class="w"> </span>___<span class="o">)(</span><span class="w">  </span>_<span class="w"> </span><span class="se">\(</span><span class="w">  </span>_<span class="w">  </span><span class="o">)</span>
+<span class="gp">$  </span>/<span class="o">(</span>__<span class="o">)</span><span class="se">\ </span><span class="w"> </span><span class="o">)</span><span class="w">   </span>/<span class="w"> </span><span class="o">)</span>__<span class="o">)</span><span class="w">  </span><span class="o">)</span>___/<span class="w"> </span><span class="o">)(</span>_<span class="o">)(</span>
+<span class="gp">$ </span><span class="o">(</span>__<span class="o">)(</span>__<span class="o">)(</span>_<span class="o">)</span><span class="se">\_</span><span class="o">)(</span>____<span class="o">)(</span>__<span class="o">)</span><span class="w">  </span><span class="o">(</span>_____<span class="o">)</span>
+
+<span class="gp">$ </span>....
+</pre></div>
+</div>
 </section>
 <section id="analyzing-data">
 <h2>2. Analyzing data<a class="headerlink" href="#analyzing-data" title="Permalink to this heading"></a></h2>
