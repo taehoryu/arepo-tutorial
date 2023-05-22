@@ -34,7 +34,7 @@ We will proceed this tutorial using the shock tube test as the first exercise, w
 
 1) Create initial condition file
 
-A python script for generating the initial condition file is already included in the directory (``create.py``)
+A python script for generating the initial condition file (``create.py``), a sample parameter file, and a configuration file (Config.sh) are already included in the directory.
 
 2. Compilation
 ======================================================
@@ -85,4 +85,4 @@ A few tips that are good to know.
 
 1. The AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin when you make an initial condition file.
 
-2. 
+2. To comment out in the parameter file, use ``%``. However, use ``#`` to comment out in the configuration file. 
