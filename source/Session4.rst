@@ -78,3 +78,11 @@ We need a test case for which compile the code. To compile, you first go to the 
 
 3. Restart
 ======================================================
+
+
+
+A few tips that are good to know.
+
+1. The AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin when you make an initial condition file.
+
+2. 
