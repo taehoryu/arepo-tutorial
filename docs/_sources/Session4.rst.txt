@@ -101,13 +101,11 @@ If you increase the compilation speed by using multiple cores, you can add ``-j5
 
 you should see an executable ``Arepo``. Now you are ready to run!
 
-3. Restart
+3. A few tips
 ======================================================
 
+These are few useful tips.
 
-
-A few tips that are good to know.
-
-1. The AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin when you make an initial condition file.
+1. An AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin to make sure that (0, 0, 0) is at the left bottom corner of the domain.
 
 2. To comment out in the parameter file, use ``%``. However, use ``#`` to comment out in the configuration file.

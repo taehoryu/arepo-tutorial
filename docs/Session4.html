@@ -62,7 +62,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#compile">3) Compile</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#restart">3. Restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-few-tips">3. A few tips</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
@@ -172,11 +172,11 @@
 <p>you should see an executable <code class="docutils literal notranslate"><span class="pre">Arepo</span></code>. Now you are ready to run!</p>
 </section>
 </section>
-<section id="restart">
-<h2>3. Restart<a class="headerlink" href="#restart" title="Permalink to this heading"></a></h2>
-<p>A few tips that are good to know.</p>
+<section id="a-few-tips">
+<h2>3. A few tips<a class="headerlink" href="#a-few-tips" title="Permalink to this heading"></a></h2>
+<p>These are few useful tips.</p>
 <ol class="arabic simple">
-<li><p>The AREPO domain with box size <cite>L</cite> starts from 0 to <cite>L</cite>, not <cite>-L/2</cite> to <cite>L/2</cite>. So you need to re-adjust the domain origin when you make an initial condition file.</p></li>
+<li><p>An AREPO domain with box size <cite>L</cite> starts from 0 to <cite>L</cite>, not <cite>-L/2</cite> to <cite>L/2</cite>. So you need to re-adjust the domain origin to make sure that (0, 0, 0) is at the left bottom corner of the domain.</p></li>
 <li><p>To comment out in the parameter file, use <code class="docutils literal notranslate"><span class="pre">%</span></code>. However, use <code class="docutils literal notranslate"><span class="pre">#</span></code> to comment out in the configuration file.</p></li>
 </ol>
 </section>
