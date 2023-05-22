@@ -28,3 +28,17 @@ If the simulation begins properly, you should see this AREPO logo,
 
 2. Analyzing data
 ================================================
+
+A script which reads the output file and make a line plot is included in the directory (``plot_shock_tube.py``). Now you need to load different modules,
+
+.. code-block:: console
+
+   $ module load anaconda3 gsl
+
+ to execute with the following line,
+ 
+.. code-block:: console
+
+   $ python3 plot_shock_tube.py
+
+Detailed explanations for the python script will be given in the session.
