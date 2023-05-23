@@ -35,10 +35,17 @@ A script which reads the output file and make a line plot is included in the dir
 
    $ module load anaconda3 gsl
 
-to execute with the following line,
+If you execute with the following line,
  
 .. code-block:: console
 
    $ python3 plot_shock_tube.py
+   
+you can get this image showing the evolution of the shock,
 
-Detailed explanations for the python script will be given in the session.
+.. image:: images/shock_tube_1d.png
+   :width: 600
+
+Detailed explanations for the python script will be given during the session.
+
+
