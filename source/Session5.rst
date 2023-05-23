@@ -35,7 +35,7 @@ A script which reads the output file and make a line plot is included in the dir
 
    $ module load anaconda3 gsl
 
- to execute with the following line,
+to execute with the following line,
  
 .. code-block:: console
 
