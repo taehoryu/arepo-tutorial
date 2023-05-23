@@ -43,7 +43,7 @@ If you execute with the following line,
    
 you can get this image showing the evolution of the shock,
 
-.. image:: images/shock_tube_1d.png
+.. image:: ../images/shock_tube_1d.png
    :width: 600
 
 Detailed explanations for the python script will be given during the session.
