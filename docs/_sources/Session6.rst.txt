@@ -6,17 +6,17 @@ Session 6. Practice 1 - relaxation of main-sequence star
 
 1. Overview
 ==================================
-A python script to make a single main-sequence star can be found in ``run/Star_relaxation/Creating_IC``. In the directory, you can find the following files,
+A python script for making a single main-sequence star can be found in ``run/Star_relaxation/Creating_IC``. In the directory, you can find the following files,
 
 .. code-block:: console
 
    $ MESAmodel  helm_table.dat  ic_MS.py  module.py    param_config_sample  snapshot_single.py  species55.txt
 
-- ``MESAmodel`` contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (``MESA_0.3Msol_Z0.020_H0.69.data``) and one for a 1Msol star (``MESA_1Msol_Z0.02_H0.5.data``). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can have any format as long as those quantities are read in ``ic_MS.py``.
+- ``MESAmodel`` contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (``MESA_0.3Msol_Z0.020_H0.69.data``) and one for a 1Msol star (``MESA_1Msol_Z0.02_H0.5.data``). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can be in any format as long as those quantities are properly read in ``ic_MS.py``.
 
 - ``helm_table.dat`` and ``species55.txt`` are files for the Helmholtz EOS which will be used for relaxing the star.
 
-- ``ic_MS.py`` is a python script which creates the initial condition files and put them in a stage directory.
+- ``ic_MS.py`` is a python script which creates the initial condition files and puts them in a stage directory.
 
 - ``param_config_sample`` constain sample ``param.txt`` and ``Config.sh`` which will be copied to the stage directory
 
