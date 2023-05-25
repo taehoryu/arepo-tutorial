@@ -18,6 +18,8 @@ A python script for making a single main-sequence star can be found in ``run/Sta
 
 - ``ic_MS.py`` is a python script which creates the initial condition files and puts them in a stage directory.
 
+- ``module.py`` contains several python functions that are used to make the initial condition files and creating plots.
+
 - ``param_config_sample`` constains sample ``param.txt`` and ``Config.sh`` which will be copied to the stage directory.
 
 - ``snapshot_single.py`` is a python script in which output data are read to make a plot.
@@ -58,6 +60,6 @@ then you can see the following (or similar) messages on display,
    $ MESA model path: MESAmodel/MESA_1Msol_Z0.02_H0.5.data
    $ move files to  ../MS_relaxation_1.0msun
    
-This means all the initial condition files are moved to ``../MS_relaxation_1.0msun`` so you just need to go to that directory and run a simulation. However, what is really important is what is written in ``ic_MS.py`` and understand how it works so that you can creat your own script or modify the script specific for your own project. Now let's see what is written in ``ic_MS.py``.
+This means all the initial condition files have been moved to ``../MS_relaxation_1.0msun`` so you just need to go to that directory and run a simulation. However, what is really important is to know what is written in ``ic_MS.py`` and understand how it works so that you can creat your own script or modify the script specific for your own project. Now let's see what is written in ``ic_MS.py``.
 
 
