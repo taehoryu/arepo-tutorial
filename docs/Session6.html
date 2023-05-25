@@ -53,6 +53,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 6. Practice 1 - relaxation of main-sequence star</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-3d-star">2. Creating 3D star</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling">3. Compiling</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of binary star</a></li>
@@ -132,6 +133,22 @@
 </div>
 <p>This means all the initial condition files have been moved to <code class="docutils literal notranslate"><span class="pre">../MS_relaxation_1.0msun</span></code> so you just need to go to that directory and run a simulation. However, what is really important is to know what is written in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> and understand how it works so that you can creat your own script or modify the script specific for your own project.</p>
 <p>Now let’s see how the initial condition files are made in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>.</p>
+</section>
+<section id="compiling">
+<h2>3. Compiling<a class="headerlink" href="#compiling" title="Permalink to this heading"></a></h2>
+<p>As we did before, we first load the environment modules go to the stage directory (<code class="docutils literal notranslate"><span class="pre">../MS_relaxation_1.0msun</span></code>)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>/usr/common/appl/modules-tcl/init/sh
+<span class="gp">$ </span>module<span class="w"> </span>purge
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>fftw-mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>gsl
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.8.18
+</pre></div>
+</div>
+<p>and go to the top level of the AREPO directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/</span></code>) and compile using the following line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make<span class="w"> </span><span class="nv">CONFIG</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/Config.sh<span class="w"> </span><span class="nv">BUILD_DIR</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/build<span class="w"> </span><span class="nv">EXEC</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/Arepo
+</pre></div>
+</div>
 </section>
 </section>
 

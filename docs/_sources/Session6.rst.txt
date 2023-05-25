@@ -63,3 +63,23 @@ then you can see the following (or similar) messages on display,
 This means all the initial condition files have been moved to ``../MS_relaxation_1.0msun`` so you just need to go to that directory and run a simulation. However, what is really important is to know what is written in ``ic_MS.py`` and understand how it works so that you can creat your own script or modify the script specific for your own project.
 
 Now let's see how the initial condition files are made in ``ic_MS.py``.
+
+3. Compiling
+==================================
+
+As we did before, we first load the environment modules go to the stage directory (``../MS_relaxation_1.0msun``)
+
+.. code-block:: console
+
+   $ source /usr/common/appl/modules-tcl/init/sh
+   $ module purge
+   $ module load mpich/3.3.6
+   $ module load fftw-mpich/3.3.6
+   $ module load gsl
+   $ module load hdf5/1.8.18
+
+and go to the top level of the AREPO directory (``<path_to_AREPO>/AREPO/``) and compile using the following line,
+
+.. code-block:: console
+
+   $ make CONFIG=./run/Star_relaxation/MS_relaxation_1.0msun/Config.sh BUILD_DIR=./run/Star_relaxation/MS_relaxation_1.0msun/build EXEC=./run/Star_relaxation/MS_relaxation_1.0msun/Arepo
