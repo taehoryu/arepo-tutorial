@@ -83,3 +83,12 @@ and go to the top level of the AREPO directory (``<path_to_AREPO>/AREPO/``) and 
 .. code-block:: console
 
    $ make CONFIG=./run/Star_relaxation/MS_relaxation_1.0msun/Config.sh BUILD_DIR=./run/Star_relaxation/MS_relaxation_1.0msun/build EXEC=./run/Star_relaxation/MS_relaxation_1.0msun/Arepo
+
+4. Running
+==================================
+
+We need to go to the stage directory (``<path_to_AREPO>/AREPO/run/Star_relaxation/MS_relaxation_1.0msun/``) and run using the following command,
+
+.. code-block:: console
+
+   $ mpirun -n 10 ./Arepo param.txt

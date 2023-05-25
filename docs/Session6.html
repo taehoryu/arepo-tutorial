@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-3d-star">2. Creating 3D star</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#compiling">3. Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running">4. Running</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of binary star</a></li>
@@ -147,6 +148,13 @@
 </div>
 <p>and go to the top level of the AREPO directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/</span></code>) and compile using the following line,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make<span class="w"> </span><span class="nv">CONFIG</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/Config.sh<span class="w"> </span><span class="nv">BUILD_DIR</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/build<span class="w"> </span><span class="nv">EXEC</span><span class="o">=</span>./run/Star_relaxation/MS_relaxation_1.0msun/Arepo
+</pre></div>
+</div>
+</section>
+<section id="running">
+<h2>4. Running<a class="headerlink" href="#running" title="Permalink to this heading"></a></h2>
+<p>We need to go to the stage directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/run/Star_relaxation/MS_relaxation_1.0msun/</span></code>) and run using the following command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>./Arepo<span class="w"> </span>param.txt
 </pre></div>
 </div>
 </section>
