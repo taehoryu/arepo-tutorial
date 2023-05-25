@@ -4,7 +4,7 @@
 Session 6. Practice 1 - relaxation of main-sequence star
 ************************************************************************************
 
-1. Creating 3D star
+1. Overview
 ==================================
 A python script to make a single main-sequence star can be found in ``run/Star_relaxation/Creating_IC``. In the directory, you can find the following files,
 
@@ -24,3 +24,11 @@ directory
 - ``snapshot_single.py`` is a python script in which output data are read to make a plot.
 
 
+2. Creating 3D star
+==================================
+
+Because ``ic_MS.py`` was written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,
+
+.. code-block:: console
+
+   $ python3 ic_MS.py

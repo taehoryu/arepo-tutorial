@@ -51,7 +51,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Making initial condition files and compile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 6. Practice 1 - relaxation of main-sequence star</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#creating-3d-star">1. Creating 3D star</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-3d-star">2. Creating 3D star</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of binary star</a></li>
@@ -84,8 +85,8 @@
              
   <section id="session-6-practice-1-relaxation-of-main-sequence-star">
 <span id="session6"></span><h1>Session 6. Practice 1 - relaxation of main-sequence star<a class="headerlink" href="#session-6-practice-1-relaxation-of-main-sequence-star" title="Permalink to this heading"></a></h1>
-<section id="creating-3d-star">
-<h2>1. Creating 3D star<a class="headerlink" href="#creating-3d-star" title="Permalink to this heading"></a></h2>
+<section id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>A python script to make a single main-sequence star can be found in <code class="docutils literal notranslate"><span class="pre">run/Star_relaxation/Creating_IC</span></code>. In the directory, you can find the following files,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>MESAmodel<span class="w">  </span>helm_table.dat<span class="w">  </span>ic_MS.py<span class="w">  </span>module.py<span class="w">    </span>param_config_sample<span class="w">  </span>snapshot_single.py<span class="w">  </span>species55.txt
 </pre></div>
@@ -100,6 +101,13 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_single.py</span></code> is a python script in which output data are read to make a plot.</p></li>
 </ul>
+</section>
+<section id="creating-3d-star">
+<h2>2. Creating 3D star<a class="headerlink" href="#creating-3d-star" title="Permalink to this heading"></a></h2>
+<p>Because <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> was written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_MS.py
+</pre></div>
+</div>
 </section>
 </section>
 
