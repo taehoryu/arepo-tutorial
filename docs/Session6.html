@@ -95,13 +95,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">MESAmodel</span></code> contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (<code class="docutils literal notranslate"><span class="pre">MESA_0.3Msol_Z0.020_H0.69.data</span></code>) and one for a 1Msol star (<code class="docutils literal notranslate"><span class="pre">MESA_1Msol_Z0.02_H0.5.data</span></code>). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can be in any format as long as those quantities are properly read in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">helm_table.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">species55.txt</span></code> are files for the Helmholtz EOS which will be used for relaxing the star.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> is a python script which creates the initial condition files and puts them in a stage directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">param_config_sample</span></code> constain sample <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">Config.sh</span></code> which will be copied to the stage directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">param_config_sample</span></code> constains sample <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">Config.sh</span></code> which will be copied to the stage directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_single.py</span></code> is a python script in which output data are read to make a plot.</p></li>
 </ul>
 </section>
 <section id="creating-3d-star">
 <h2>2. Creating 3D star<a class="headerlink" href="#creating-3d-star" title="Permalink to this heading"></a></h2>
-<p>Because <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> was written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,</p>
+<p>Because <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> is written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_MS.py
 </pre></div>
 </div>

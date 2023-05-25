@@ -18,7 +18,7 @@ A python script for making a single main-sequence star can be found in ``run/Sta
 
 - ``ic_MS.py`` is a python script which creates the initial condition files and puts them in a stage directory.
 
-- ``param_config_sample`` constain sample ``param.txt`` and ``Config.sh`` which will be copied to the stage directory
+- ``param_config_sample`` constains sample ``param.txt`` and ``Config.sh`` which will be copied to the stage directory.
 
 - ``snapshot_single.py`` is a python script in which output data are read to make a plot.
 
@@ -26,7 +26,7 @@ A python script for making a single main-sequence star can be found in ``run/Sta
 2. Creating 3D star
 ==================================
 
-Because ``ic_MS.py`` was written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,
+Because ``ic_MS.py`` is written to make initial condition files and put all the necessary files in a new directory authomatically, creating a 3D star is really easy. What you need to do is,
 
 .. code-block:: console
 
