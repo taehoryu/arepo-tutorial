@@ -97,10 +97,14 @@ We need to go to the stage directory (``<path_to_AREPO>/AREPO/run/Star_relaxatio
 5. Analyzing
 ==================================
 
-To execute the python script, using the command line,
+To execute the python script, use the command line,
 
 .. code-block:: console
 
    $ python3 snapshot_single.py
 
+then, you will get the following image,
+
+.. image:: ../images/single_star_relaxation.png
+   :width: 600
 
