@@ -95,10 +95,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">MESAmodel</span></code> contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (<code class="docutils literal notranslate"><span class="pre">MESA_0.3Msol_Z0.020_H0.69.data</span></code>) and one for a 1Msol star (<code class="docutils literal notranslate"><span class="pre">MESA_1Msol_Z0.02_H0.5.data</span></code>). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can have any format as long as those quantities are read in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">helm_table.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">species55.txt</span></code> are files for the Helmholtz EOS which will be used for relaxing the star.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> is a python script which creates the initial condition files and put them in a stage directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">param_config_sample</span></code> constain sample <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">Config.sh</span></code> which will be copied to the stage</p></li>
-</ul>
-<p>directory</p>
-<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">param_config_sample</span></code> constain sample <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">Config.sh</span></code> which will be copied to the stage directory</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_single.py</span></code> is a python script in which output data are read to make a plot.</p></li>
 </ul>
 </section>
@@ -108,6 +105,31 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_MS.py
 </pre></div>
 </div>
+<p>then you can see the following (or similar) messages on display,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_MS.py
+<span class="gp">$ </span><span class="o">[</span>Stellar<span class="w"> </span>info<span class="o">]</span>
+<span class="gp">$ </span>MESAmodel<span class="w"> </span>MESAmodel/MESA_1Msol_Z0.02_H0.5.data
+<span class="gp">$ </span>Mass<span class="w"> </span>:<span class="w"> </span><span class="m">1</span>.000<span class="w"> </span>Msol
+<span class="gp">$ </span>Radius:<span class="w"> </span><span class="m">0</span>.952<span class="w"> </span>Rsol
+<span class="gp">$ </span>Core<span class="w"> </span>H<span class="w"> </span>fraction:<span class="w"> </span><span class="m">4</span>.921e-01
+<span class="gp">$ </span>Core<span class="w"> </span>He<span class="w"> </span>fraction:<span class="w"> </span><span class="m">4</span>.873e-01
+<span class="gp">$ </span>Total<span class="w"> </span>mass:<span class="w"> </span><span class="m">0</span>.999703<span class="w"> </span>solar<span class="w"> </span>masses
+<span class="gp">$ </span>Using<span class="w"> </span><span class="m">25000</span><span class="w"> </span>particles<span class="w"> </span>of<span class="w"> </span>mass<span class="w"> </span><span class="m">7</span>.95364e+28<span class="w"> </span><span class="o">(</span><span class="m">3</span>.99881e-05<span class="w"> </span>solar<span class="w"> </span>masses<span class="o">)</span>
+<span class="gp">$ </span><span class="nv">volcell</span><span class="o">=</span><span class="m">5</span>.42806e+29,<span class="w"> </span><span class="nv">volboxcell</span><span class="o">=</span><span class="m">7</span>.0982e+31
+<span class="gp">$ </span><span class="nv">volcell</span><span class="o">=</span><span class="m">5</span>.42806e+30,<span class="w"> </span><span class="nv">volboxcell</span><span class="o">=</span><span class="m">7</span>.0982e+31,<span class="w"> </span><span class="nv">np</span><span class="o">=</span><span class="m">192</span>
+<span class="gp">$ </span><span class="nv">volcell</span><span class="o">=</span><span class="m">5</span>.42806e+31,<span class="w"> </span><span class="nv">volboxcell</span><span class="o">=</span><span class="m">7</span>.0982e+31,<span class="w"> </span><span class="nv">np</span><span class="o">=</span><span class="m">108</span>
+<span class="gp">$ </span>Added<span class="w"> </span><span class="m">3980</span><span class="w"> </span>box<span class="w"> </span>cells.
+<span class="gp">$ </span>Created<span class="w"> </span><span class="m">29288</span><span class="w"> </span>particles.
+<span class="gp">$ </span>Writing<span class="w"> </span>gadget<span class="w"> </span>file:<span class="w">  </span>IC.hdf5
+<span class="gp">$ </span>Done.
+<span class="gp">$ </span>TimeMax:<span class="w"> </span><span class="m">14799</span>.19175664247
+<span class="gp">$ </span>TimeBetSnapshot:<span class="w"> </span><span class="m">1479</span>.9191756642472
+<span class="gp">$ </span>BoxSize:<span class="w"> </span><span class="m">662474960051</span>.9448
+<span class="gp">$ </span>MESA<span class="w"> </span>model<span class="w"> </span>path:<span class="w"> </span>MESAmodel/MESA_1Msol_Z0.02_H0.5.data
+<span class="gp">$ </span>move<span class="w"> </span>files<span class="w"> </span>to<span class="w">  </span>../MS_relaxation_1.0msun
+</pre></div>
+</div>
+<p>This means all the initial condition files are moved to <code class="docutils literal notranslate"><span class="pre">../MS_relaxation_1.0msun</span></code> so you just need to go to that directory and run a simulation. However, what is really important is what is written in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code> and understand how it works so that you can creat your own script or modify the script specific for your own project. Now let’s see what is written in <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>.</p>
 </section>
 </section>
 
