@@ -92,3 +92,15 @@ We need to go to the stage directory (``<path_to_AREPO>/AREPO/run/Star_relaxatio
 .. code-block:: console
 
    $ mpirun -n 10 ./Arepo param.txt
+
+
+5. Analyzing
+==================================
+
+To execute the python script, using the command line,
+
+.. code-block:: console
+
+   $ python3 snapshot_single.py
+
+
