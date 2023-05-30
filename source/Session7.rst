@@ -100,8 +100,10 @@ To execute the python script, use the command line,
 
    $ python3 snapshot_binary.py
 
-then, you will get a series of images, which can be compressed to a movie,
+then, you will get a series of images, for example,
 
-.. raw:: html
-     
-   <video controls src="_static/movie.mp4"></video>
+.. image:: ../images/binary_star_relaxation_0.0.png
+           ../images/binary_star_relaxation_18437.png
+           ../images/binary_star_relaxation_31093.png
+
+
