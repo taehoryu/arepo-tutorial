@@ -104,5 +104,4 @@ then, you will get a series of images, which can be compressed to a movie,
 
 .. raw:: html
      
-   <video controls src="../images/movie.mp4"></video>
-   :width: 600
+   <video controls src="_static/movie.mp4"></video>
