@@ -105,3 +105,4 @@ then, you will get the following movie,
 .. raw:: html
      
    <video controls src="../images/movie.mp4"></video>
+   :width: 600
