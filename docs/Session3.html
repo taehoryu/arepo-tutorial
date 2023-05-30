@@ -44,7 +44,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Agenda.html">Agenda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Schedule.html">Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Schedule.html">Schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session1.html">Session 1. Introduction to hydrodynamics simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 3. Preparation - download and installation</a><ul>
@@ -60,8 +60,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Making initial condition files and compile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 1 - shock-tube</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of main-sequence star</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 1 - relaxation of main-sequence star</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of binary star</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session8.html">Session 8. Developing your own routine</a></li>
 </ul>
 
@@ -94,13 +94,13 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In this session, we will prepare for practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
-<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> is an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [<a href="#id1"><span class="problematic" id="id2">*</span></a>MPA].</p>
+<code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> is an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [<a href="#id1"><span class="problematic" id="id2">*</span></a>MPA]. Also the path to your directory on the MPA cluster will be indicated as <code class="docutils literal notranslate"><span class="pre">&lt;MPA_path_to_your_directory&gt;</span></code>.</p>
 </section>
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
 <p>The codes are stored in <code class="docutils literal notranslate"><span class="pre">/afs/mpa/temp/tryu/AREPO_tutorial/</span></code>. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/tryu/AREPO_tutorial/
-<span class="gp">$ </span>cp<span class="w"> </span>-r<span class="w"> </span>*<span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>$ cd &lt;MPA_path_to_taeho&#39;s_directory&gt;/AREPO_tutorial/
+$ cp -r * &lt;MPA_path_to_your_directory&gt;/
 </pre></div>
 </div>
 </section>
@@ -125,20 +125,20 @@
 </div>
 <p>which will give the following information,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>-------------------------------------------------------------------
-<span class="gp">$ </span>/usr/common/share/modulefiles/MPA/libs/gsl/2.4:
-<span class="gp">$ </span>module-whatis<span class="w">    </span>Enables<span class="w"> </span>usage<span class="w"> </span>of<span class="w"> </span>gsl<span class="w"> </span><span class="m">2</span>.4
-<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>/opt/gsl-2.4/bin<span class="w"> </span><span class="o">(</span>:red:MPA<span class="o">)</span>
-<span class="gp">$ </span>prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">    </span>/opt/gsl-2.4/lib
+<span class="gp">$ </span>..../gsl/2.4:
+<span class="gp">$ </span>module-whatis<span class="w">    </span>....
+<span class="gp">$ </span>prepend-path<span class="w">    </span>PATH<span class="w">    </span>...
+<span class="gp">$ </span>prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">    </span>....
 <span class="gp">$ </span>-------------------------------------------------------------------
 </pre></div>
 </div>
 <p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now go to the <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> directory,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/afs/mpa/temp/&lt;path_to_your_directory&gt;/Arepo-snap-util
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>&lt;MPA_path_to_your_directory&gt;/Arepo-snap-util
 </pre></div>
 </div>
 <p>and add the following lines [<a href="#id5"><span class="problematic" id="id6">*</span></a>MPA],</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/include&#39;</span><span class="p">]</span>
-<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/opt/gsl-2.4/lib&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;...&#39;</span><span class="p">]</span>
+<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;...&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>

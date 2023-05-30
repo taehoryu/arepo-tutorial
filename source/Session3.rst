@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 In this session, we will prepare for practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [*MPA].
+``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [*MPA]. Also the path to your directory on the MPA cluster will be indicated as ``<MPA_path_to_your_directory>``.
 
 Download
 =========
@@ -16,8 +16,8 @@ The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. Once you log ont
 
 .. code-block:: console
 
-   $ cd /afs/mpa/temp/tryu/AREPO_tutorial/
-   $ cp -r * /afs/mpa/temp/<path_to_your_directory>/
+   $ cd <MPA_path_to_taeho's_directory>/AREPO_tutorial/
+   $ cp -r * <MPA_path_to_your_directory>/
    
 
 Installation
@@ -49,24 +49,24 @@ which will give the following information,
 .. code-block:: console
 
    $ -------------------------------------------------------------------
-   $ /usr/common/share/modulefiles/MPA/libs/gsl/2.4:
-   $ module-whatis    Enables usage of gsl 2.4
-   $ prepend-path    PATH    /opt/gsl-2.4/bin (:red:MPA)
-   $ prepend-path    LD_LIBRARY_PATH    /opt/gsl-2.4/lib
+   $ ..../gsl/2.4:
+   $ module-whatis    ....
+   $ prepend-path    PATH    ...
+   $ prepend-path    LD_LIBRARY_PATH    ....
    $ -------------------------------------------------------------------
 
 The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util`` directory,
 
 .. code-block:: console
 
-   $ cd /afs/mpa/temp/<path_to_your_directory>/Arepo-snap-util
+   $ cd <MPA_path_to_your_directory>/Arepo-snap-util
 
 and add the following lines [*MPA],
 
 .. code-block:: python
 
-   incl_dirs = ['/opt/gsl-2.4/include']
-   libs_dirs = ['/opt/gsl-2.4/lib']
+   incl_dirs = ['...']
+   libs_dirs = ['...']
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run ``AREPO`` on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
