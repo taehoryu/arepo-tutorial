@@ -104,4 +104,4 @@ then, you will get the following movie,
 
 .. raw:: html
      
-   <video controls src="../image/movie.mp4"></video>
+   <video controls src="../images/movie.mp4"></video>
