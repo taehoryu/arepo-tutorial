@@ -105,5 +105,3 @@ then, you will get the following image,
 .. raw:: html
      
      <iframe width="560" height="315" src="https://youtu.be/3ZlxOuCV1Tw" frameborder="0" allowfullscreen></iframe>
-
-   :width: 600
