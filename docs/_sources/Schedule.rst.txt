@@ -11,6 +11,6 @@ Schedule
 - 12:30 - 13:30 Lunch
 - 13:30 - 14:00 Session 5. Running simulation and analyzing data
 - 14:00 - 15:00 Session 6. Practice 1. - relaxation of star
-- 15:00 - 15:30 Break
+- 15:00 - 15:30 Coffee break
 - 15:30 - 16:15 Session 7. Practice 2. - relaxation of binary star
 - 16:15 - 16:30 Wrap-up
