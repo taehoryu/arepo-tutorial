@@ -14,7 +14,7 @@ A python script for making a binary star can be found in ``run/Binary_relaxation
    
 Now we will create a binary consisting of two stars that we relaxed in the previous section
 
-2. Creating 3D binarystar
+2. Creating 3D binary star
 ==================================
 
 Like ``ic_MS.py``, ``ic_binary.py`` is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically. You just need to make sure that ``path_to_single_relaxed_star`` is properly set to one of the output files from the simulation for the single star relaxation.
