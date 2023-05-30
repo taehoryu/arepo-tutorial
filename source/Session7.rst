@@ -111,6 +111,7 @@ At pericenter
 .. image:: ../images/binary_star_relaxation_18437.png
 
 Near apocenter
+
 .. image:: ../images/binary_star_relaxation_31093.png
 
 
