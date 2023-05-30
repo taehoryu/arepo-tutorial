@@ -6,19 +6,33 @@ Session 7. Practice 2 - relaxation of binary star
 
 1. Overview
 ==================================
-A python script for making a single main-sequence star can be found in ``run/Binary_relaxation/Creating_IC``. In the directory, you can find the following files,
+A python script for making a binary star can be found in ``run/Binary_relaxation/Creating_IC``. In the directory, you can find the following files,
 
 .. code-block:: console
 
    $ helm_table.dat  ic_binary.py  module.py    param_config_sample  snapshot_binary.py  species55.txt
    
-We will create a binary consisting of two stars that we relaxed in the previous section.
+Now we will create a binary consisting of two stars that we relaxed in the previous section
 
 2. Creating 3D binarystar
 ==================================
 
-Like ``ic_MS.py``, ``ic_binary.py`` is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically with the following command,
+Like ``ic_MS.py``, ``ic_binary.py`` is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically. You just need to make sure that ``path_to_single_relaxed_star`` is properly set to one of the output files from the simulation for the single star relaxation.
 
+.. code-block:: console
+
+   $ path_to_single_relaxed_star = "../../Star_relaxation/MS_relaxation_1.0msun/output/snapshot_010.hdf5"
+
+The semimajor axis and eccentricity of the binary are set with the following parameters,
+
+.. code-block:: console
+
+   $ ecc = 0.5
+
+   $ semi = 3.0 * unit_dist
+
+With that, you can generate the initial condition files using the following command,
+ 
 .. code-block:: console
 
    $ python3 ic_binary.py
