@@ -67,7 +67,7 @@ Now let's see how the initial condition files are made in ``ic_MS.py``.
 3. Compiling
 ==================================
 
-As we did before, we first load the environment modules go to the stage directory (``../MS_relaxation_1.0msun``)
+As we did before, we first load the environment modules
 
 .. code-block:: console
 
@@ -87,7 +87,7 @@ and go to the top level of the AREPO directory (``<path_to_AREPO>/AREPO/``) and 
 4. Running
 ==================================
 
-We need to go to the stage directory (``<path_to_AREPO>/AREPO/run/Star_relaxation/MS_relaxation_1.0msun/``) and run using the following command,
+We go to the stage directory (``<path_to_AREPO>/AREPO/run/Star_relaxation/MS_relaxation_1.0msun/``) and run using the following command,
 
 .. code-block:: console
 

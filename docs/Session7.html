@@ -53,6 +53,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 1 - relaxation of main-sequence star</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 7. Practice 2 - relaxation of binary star</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-3d-binarystar">2. Creating 3D binarystar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling">3. Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running">4. Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzing">5. Analyzing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session8.html">Session 8. Developing your own routine</a></li>
@@ -86,6 +90,70 @@
 <span id="session7"></span><h1>Session 7. Practice 2 - relaxation of binary star<a class="headerlink" href="#session-7-practice-2-relaxation-of-binary-star" title="Permalink to this heading"></a></h1>
 <section id="overview">
 <h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>A python script for making a single main-sequence star can be found in <code class="docutils literal notranslate"><span class="pre">run/Binary_relaxation/Creating_IC</span></code>. In the directory, you can find the following files,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>helm_table.dat<span class="w">  </span>ic_binary.py<span class="w">  </span>module.py<span class="w">    </span>param_config_sample<span class="w">  </span>snapshot_binary.py<span class="w">  </span>species55.txt
+</pre></div>
+</div>
+<p>We will create a binary consisting of two stars that we relaxed in the previous section.</p>
+</section>
+<section id="creating-3d-binarystar">
+<h2>2. Creating 3D binarystar<a class="headerlink" href="#creating-3d-binarystar" title="Permalink to this heading"></a></h2>
+<p>Like <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>, <code class="docutils literal notranslate"><span class="pre">ic_binary.py</span></code> is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically with the following command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_binary.py
+</pre></div>
+</div>
+<p>then you can see the following (or similar) messages on display,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_binary.py
+<span class="gp">$ </span><span class="o">[</span>BINARY<span class="w"> </span>INFO<span class="o">]</span>
+<span class="gp">$ </span>m1<span class="w"> </span><span class="m">1</span>.035e+00<span class="w"> </span>Msun<span class="w"> </span><span class="m">1</span>.035e+00<span class="w"> </span>Msun
+<span class="gp">$ </span>semimajor<span class="w"> </span>axis<span class="w"> </span><span class="o">[</span>rsun<span class="o">]</span><span class="w"> </span><span class="m">3</span>.000
+<span class="gp">$ </span>ecc<span class="w">                   </span><span class="m">0</span>.500
+<span class="gp">$ </span>total<span class="w"> </span>particle<span class="w"> </span><span class="m">26376</span><span class="w"> </span>+<span class="w"> </span><span class="nv">26376</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">52752</span>
+<span class="gp">$ </span><span class="m">52752</span><span class="w"> </span>particles<span class="w"> </span>found.
+<span class="gp">$ </span>Building<span class="w"> </span>grid<span class="w"> </span>with<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>cells.
+<span class="gp">$ </span>Created<span class="w"> </span><span class="m">3438</span><span class="w"> </span>particles<span class="w"> </span>to<span class="w"> </span>fill<span class="w"> </span>grid.
+<span class="gp">$ </span><span class="m">56190</span><span class="w"> </span>particles<span class="w"> </span>found.
+<span class="gp">$ </span>Building<span class="w"> </span>grid<span class="w"> </span>with<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>cells.
+<span class="gp">$ </span>Created<span class="w"> </span><span class="m">2698</span><span class="w"> </span>particles<span class="w"> </span>to<span class="w"> </span>fill<span class="w"> </span>grid.
+<span class="gp">$ </span><span class="m">58888</span><span class="w"> </span>particles<span class="w"> </span>found.
+<span class="gp">$ </span>Building<span class="w"> </span>grid<span class="w"> </span>with<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>x<span class="w"> </span><span class="m">16</span><span class="w"> </span>cells.
+<span class="gp">$ </span>Created<span class="w"> </span><span class="m">3096</span><span class="w"> </span>particles<span class="w"> </span>to<span class="w"> </span>fill<span class="w"> </span>grid.
+<span class="gp">$ </span>Writing<span class="w"> </span>gadget<span class="w"> </span>file:<span class="w">  </span>IC.hdf5
+<span class="gp">$ </span>Done.
+<span class="gp">$ </span>move<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>../binary_relaxation_1.0Msol_1.0Msol_a3.0_e0.5
+</pre></div>
+</div>
+</section>
+<section id="compiling">
+<h2>3. Compiling<a class="headerlink" href="#compiling" title="Permalink to this heading"></a></h2>
+<p>As we did before, we first load the environment modules,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>/usr/common/appl/modules-tcl/init/sh
+<span class="gp">$ </span>module<span class="w"> </span>purge
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>fftw-mpich/3.3.6
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>gsl
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.8.18
+</pre></div>
+</div>
+<p>and go to the top level of the AREPO directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/</span></code>) and compile using the following line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make<span class="w"> </span><span class="nv">CONFIG</span><span class="o">=</span>./run/Binary_relaxation/binary_relaxation_1.0Msol_1.0Msol_a3.0_e0.5/Config.sh<span class="w"> </span><span class="nv">BUILD_DIR</span><span class="o">=</span>./run/Binary_relaxation/binary_relaxation_1.0Msol_1.0Msol_a3.0_e0.5/build<span class="w"> </span><span class="nv">EXEC</span><span class="o">=</span>./run/Binary_relaxation/binary_relaxation_1.0Msol_1.0Msol_a3.0_e0.5/Arepo
+</pre></div>
+</div>
+</section>
+<section id="running">
+<h2>4. Running<a class="headerlink" href="#running" title="Permalink to this heading"></a></h2>
+<p>Now we go to the stage directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/run/Binary_relaxation/binary_relaxation_1.0Msol_1.0Msol_a3.0_e0.5/</span></code>) and run using the following command,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>./Arepo<span class="w"> </span>param.txt
+</pre></div>
+</div>
+</section>
+<section id="analyzing">
+<h2>5. Analyzing<a class="headerlink" href="#analyzing" title="Permalink to this heading"></a></h2>
+<p>To execute the python script, use the command line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>snapshot_binary.py
+</pre></div>
+</div>
+<p>then, you will get the following image,</p>
 </section>
 </section>
 
