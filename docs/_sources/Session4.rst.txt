@@ -84,7 +84,7 @@ We need a test case for which compile the code. To compile, you first go to the 
 
 .. code-block:: console
 
-   $ cd /afs/mpa/temp/<path_to_your_directory>/AREPO/
+   $ cd <MPA_path_to_your_directory>/
    
 We will compile the code with the configuration file for the shock tube test with the following command,
 
