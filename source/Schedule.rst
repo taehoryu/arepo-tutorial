@@ -3,8 +3,8 @@
 Schedule
 ============
 
-- 9:00  - 9:30  Session 1. Brief introduction of hydrodynamics simulation
-- 9:30  - 10:00 Session 2. Brief introduction of AREPO
+- 09:00 - 09:30  Session 1. Brief introduction of hydrodynamics simulation
+- 09:30 - 10:00 Session 2. Brief introduction of AREPO
 - 10:00 - 11:00 Session 3. Preparation - download, installation
 - 11:00 - 11:30 Coffee break
 - 11:30 - 12:30 Session 4. Making initial condition files and compilation
