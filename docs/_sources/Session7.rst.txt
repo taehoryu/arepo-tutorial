@@ -103,7 +103,9 @@ To execute the python script, use the command line,
 then, you will get a series of images, for example,
 
 .. image:: ../images/binary_star_relaxation_0.0.png
+
 .. image:: ../images/binary_star_relaxation_18437.png
+
 .. image:: ../images/binary_star_relaxation_31093.png
 
 
