@@ -1,7 +1,7 @@
 .. _Session4:
 
 ************************************************************************************
-Session 4. Making initial condition files and compile
+Session 4. Making initial condition files and compilation
 ************************************************************************************
 
 1. Overview
