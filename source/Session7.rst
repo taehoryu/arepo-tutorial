@@ -100,7 +100,7 @@ To execute the python script, use the command line,
 
    $ python3 snapshot_binary.py
 
-then, you will get the following movie,
+then, you will get a series of images, which can be compressed to a movie,
 
 .. raw:: html
      
