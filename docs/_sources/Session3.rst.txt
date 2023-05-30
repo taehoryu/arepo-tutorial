@@ -12,7 +12,7 @@ In this session, we will prepare for practice sessions. The codes that you will 
 Download
 =========
 
-The codes are stored in ``/afs/mpa/temp/tryu/AREPO_tutorial/``. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):
+The codes are stored in ``<MPA_path_to_taeho's_directory>/AREPO_tutorial/``. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):
 
 .. code-block:: console
 
