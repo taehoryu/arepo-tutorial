@@ -9,9 +9,9 @@ Overview
 The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
 There are four big steps in running hydrodynamics simulations using AREPO.
 
-1) Creating initial condition files - `Arepo-snap-util``
+1) Creating initial condition files - ``Arepo-snap-util``
 2) Compiling - ``AREPO``
-3) Running  - `Arepo-snap-util``
+3) Running  - ``Arepo-snap-util``
 4) Analyzing  - ``AREPO``
 
 The code that will be used is written at each step.
