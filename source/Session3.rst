@@ -6,23 +6,23 @@ Session 3. Preparation - download and installation
 
 Overview
 ================================================================
-In this session, we will prepare for practice sessions. The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
+The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
 ``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [*MPA]. Also the path to your directory on the MPA cluster will be indicated as ``<MPA_path_to_your_directory>``.
 
 Download
 =========
 
-The codes are stored in ``<MPA_path_to_taeho's_directory>/AREPO_tutorial/``. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):
+You can download a zipped file containing the codes using the link to Datashare. Then you need to transfer the file to your directory on the MPA cluster and unzip it. Then you can see the follow directories
 
 .. code-block:: console
 
-   $ cd <MPA_path_to_taeho's_directory>/AREPO_tutorial/
-   $ cp -r * <MPA_path_to_your_directory>/
+   $ AREPO  Arepo-snap-util
    
-
 Installation
 =============
-To run ``AREPO``, you would need to install several programs (e.g., hdf5, mpi, and so on). However, all those required programs are installed on the MPA cluster. All you need to do is load proper environmental modules required for compiling and running ``AREPO`` simulations. However, you need to install ``Arepo-snap-util`` to use the built-in routines in the analysis package. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python scripts. Let's install ``Arepo-snap-util`` by following the follow steps.
+To run ``AREPO``, you would need to install several dependent programs (e.g., hdf5, mpi, gsl, and fftw). However, all those programs are already installed on the MPA cluster. So you don't need to install anything and all you need to do is load proper environmental modules required for compiling and running ``AREPO`` simulations.
+
+However, you need to install ``Arepo-snap-util`` to use its built-in routines. Once you install it, you can call any functions of the code in your python scripts by adding a line ``from loadmodules import *`` to the header of your python script. Let's install ``Arepo-snap-util``.
 
 1. Load modules
 ---------------

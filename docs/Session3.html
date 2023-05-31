@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Session 4. Making initial condition files and compile" href="Session4.html" />
+    <link rel="next" title="Session 4. Making initial condition files and compilation" href="Session4.html" />
     <link rel="prev" title="Session 2. Introduction to AREPO" href="Session2.html" /> 
 </head>
 
@@ -58,7 +58,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Making initial condition files and compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session4.html">Session 4. Making initial condition files and compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session6.html">Session 6. Practice 1 - relaxation of main-sequence star</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session7.html">Session 7. Practice 2 - relaxation of binary star</a></li>
@@ -93,20 +93,20 @@
 <span id="session3"></span><h1>Session 3. Preparation - download and installation<a class="headerlink" href="#session-3-preparation-download-and-installation" title="Permalink to this heading"></a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p>In this session, we will prepare for practice sessions. The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
+<p>The codes that you will need are <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> and <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.
 <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> is an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to read output data and make plots from the data. Some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [<a href="#id1"><span class="problematic" id="id2">*</span></a>MPA]. Also the path to your directory on the MPA cluster will be indicated as <code class="docutils literal notranslate"><span class="pre">&lt;MPA_path_to_your_directory&gt;</span></code>.</p>
 </section>
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
-<p>The codes are stored in <code class="docutils literal notranslate"><span class="pre">&lt;MPA_path_to_taeho's_directory&gt;/AREPO_tutorial/</span></code>. Once you log onto the mpa cluster, please go to the directory and copy both to your directory (you should have access to the directory by now. If not, please let me know):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>$ cd &lt;MPA_path_to_taeho&#39;s_directory&gt;/AREPO_tutorial/
-$ cp -r * &lt;MPA_path_to_your_directory&gt;/
+<p>You can download a zipped file containing the codes using the link to Datashare. Then you need to transfer the file to your directory on the MPA cluster and unzip it. Then you can see the follow directories</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>AREPO<span class="w">  </span>Arepo-snap-util
 </pre></div>
 </div>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
-<p>To run <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you would need to install several programs (e.g., hdf5, mpi, and so on). However, all those required programs are installed on the MPA cluster. All you need to do is load proper environmental modules required for compiling and running <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations. However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use the built-in routines in the analysis package. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python scripts. Let’s install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> by following the follow steps.</p>
+<p>To run <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you would need to install several dependent programs (e.g., hdf5, mpi, gsl, and fftw). However, all those programs are already installed on the MPA cluster. So you don’t need to install anything and all you need to do is load proper environmental modules required for compiling and running <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations.</p>
+<p>However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use its built-in routines. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python script. Let’s install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.</p>
 <section id="load-modules">
 <h3>1. Load modules<a class="headerlink" href="#load-modules" title="Permalink to this heading"></a></h3>
 <blockquote>
@@ -165,7 +165,7 @@ $ cp -r * &lt;MPA_path_to_your_directory&gt;/
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Session2.html" class="btn btn-neutral float-left" title="Session 2. Introduction to AREPO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Session4.html" class="btn btn-neutral float-right" title="Session 4. Making initial condition files and compile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Session4.html" class="btn btn-neutral float-right" title="Session 4. Making initial condition files and compilation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
