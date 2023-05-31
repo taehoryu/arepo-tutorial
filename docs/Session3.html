@@ -99,7 +99,7 @@
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
 <p>You can download a zipped file containing the codes using the link to Datashare. Then you need to transfer the file to your directory on the MPA cluster and unzip it. Then you can see the follow directories</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>AREPO<span class="w">  </span>Arepo-snap-util
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>AREPO<span class="w"> </span>Arepo-snap-util
 </pre></div>
 </div>
 </section>
@@ -109,10 +109,8 @@
 <p>However, you need to install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> to use its built-in routines. Once you install it, you can call any functions of the code in your python scripts by adding a line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">loadmodules</span> <span class="pre">import</span> <span class="pre">*</span></code> to the header of your python script. Let’s install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code>.</p>
 <section id="load-modules">
 <h3>1. Load modules<a class="headerlink" href="#load-modules" title="Permalink to this heading"></a></h3>
-<blockquote>
-<div><p>Let’s load a python module,</p>
-</div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3<span class="w"> </span>gsl
+<p>Let’s load the python and gsl modules,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>python3<span class="w"> </span>gsl
 </pre></div>
 </div>
 <p>[<a href="#id3"><span class="problematic" id="id4">*</span></a>MPA]</p>
@@ -133,15 +131,15 @@
 </pre></div>
 </div>
 <p>The path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> is next to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Now go to the <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> directory,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>&lt;MPA_path_to_your_directory&gt;/Arepo-snap-util
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>&lt;MPA_path_to_your_directory&gt;/AREPO_tutorial/Arepo-snap-util
 </pre></div>
 </div>
 <p>and add the following lines [<a href="#id5"><span class="problematic" id="id6">*</span></a>MPA],</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;...&#39;</span><span class="p">]</span>
-<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;...&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">incl_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.../include&#39;</span><span class="p">]</span>
+<span class="n">libs_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.../lib&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). If you want to run <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
+<p>below <code class="docutils literal notranslate"><span class="pre">#ADD</span> <span class="pre">PATH</span> <span class="pre">HERE</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using your favorite editor (e.g., emacs). Here, ‘…’ should be replaced with the path to gsl. If you want to analyze data on <code class="docutils literal notranslate"><span class="pre">raven</span></code>, <code class="docutils literal notranslate"><span class="pre">cobra</span></code> or <code class="docutils literal notranslate"><span class="pre">freya</span></code> using the same analysis package, please follow the same steps above: the only difference would be that you will need to use the proper path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code> on the machine you are on (* cobra needs extra steps. If you want to run on cobra, please let me know).</p>
 </section>
 <section id="install-the-package">
 <h3>3. Install the package<a class="headerlink" href="#install-the-package" title="Permalink to this heading"></a></h3>

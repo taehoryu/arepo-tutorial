@@ -16,7 +16,7 @@ You can download a zipped file containing the codes using the link to Datashare.
 
 .. code-block:: console
 
-   $ AREPO  Arepo-snap-util
+   $ AREPO Arepo-snap-util
    
 Installation
 =============
@@ -27,11 +27,11 @@ However, you need to install ``Arepo-snap-util`` to use its built-in routines. O
 1. Load modules
 ---------------
   
-  Let's load a python module,
+Let's load the python and gsl modules,
 
 .. code-block:: console
 
-   $ module load anaconda3 gsl
+   $ module load python3 gsl
 
 [*MPA]
 
@@ -59,16 +59,16 @@ The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util`` direc
 
 .. code-block:: console
 
-   $ cd <MPA_path_to_your_directory>/Arepo-snap-util
+   $ cd <MPA_path_to_your_directory>/AREPO_tutorial/Arepo-snap-util
 
 and add the following lines [*MPA],
 
 .. code-block:: python
 
-   incl_dirs = ['...']
-   libs_dirs = ['...']
+   incl_dirs = ['.../include']
+   libs_dirs = ['.../lib']
 
-below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). If you want to run ``AREPO`` on ``raven``, ``cobra`` or ``freya`` and analyze data there using this analysis package, please follow the same steps: the only difference would be that the path to ``gsl`` on a different machine is different (* cobra needs extra steps. If you want to run on cobra, please let me know).
+below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). Here, '...' should be replaced with the path to gsl. If you want to analyze data on ``raven``, ``cobra`` or ``freya`` using the same analysis package, please follow the same steps above: the only difference would be that you will need to use the proper path to ``gsl`` on the machine you are on (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
 3. Install the package
 -----------------------
