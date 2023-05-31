@@ -92,6 +92,18 @@ If you do not see any errors and the installation ends with,
    $ ...
    $ running install_clib
    $ customize UnixCCompiler
+   
+or
 
-you successfuly installed the package.
+.. code-block:: console
+
+   $ ########### EXT COMPILER OPTIMIZATION ###########
+   $ ...
+   $ CPU baseline  :
+   $ ...
+   $ CPU dispatch  :
+   $ ...
+   $ INFO: ...
+   
+that means you have successfuly installed the package.
 
