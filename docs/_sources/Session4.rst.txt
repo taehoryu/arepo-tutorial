@@ -22,7 +22,7 @@ This session comprises of two sub-sessions. In the first sub-session (``1. Make 
 1. Make initial setup files
 ======================================================
 
-For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using AREPO are,
+For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
 
 1. create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
 
@@ -49,7 +49,7 @@ A configuration file (Config.sh) is included in the directory. Detailed explanat
 
 2. Compilation
 ======================================================
-Let's do the part that first-time users spend a long time on. As before, we will go through this step by step.
+Let's do the part that first-time users would spend a long time on. As before, we will go through this step by step.
 
 1) Load modules
 ---------------
@@ -68,7 +68,7 @@ We need several modules to compile and run AREPO. Let's load the following modul
 2) Set SYSTYPE
 ------------------
 
-To successfully compile almost every hydrodynamics code, it is very important to set the paths to the dependences (e.g., those modules we just loaded) inside the code. As mentioned above, because the paths to the modules are different for dffierent machines, you have to set the paths for each machine you are using. Every code has a different file in which you need to set the paths. The file for ``AREPO`` is ``makefiles/systypes.make``. Fortunately, the system setup for the mpa cluster, raven, cobra, and freya were already set! All you need to do is to make sure that you tell the code correctly which system you are on. You can set the system type by,
+To successfully compile almost every hydrodynamics code, it is very important to set the paths to the dependences (e.g., those modules we just loaded) inside the code. As mentioned above, because the paths to the modules are different for dffierent machines, you have to set the paths for each machine you are using. Every code has a different file in which you need to set the paths. The file for ``AREPO`` is ``makefiles/systypes.make``. Fortunately, the system setups for the mpa cluster, raven, cobra, and freya were already set! All you need to do is to make sure that you tell the code correctly which system you are on. You can set the system type by,
 
 .. code-block:: console
 
