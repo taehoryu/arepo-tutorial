@@ -27,7 +27,13 @@ However, you need to install ``Arepo-snap-util`` to use its built-in routines. O
 1. Load modules
 ---------------
   
-Let's load the python and gsl modules,
+Because we will compile and run the test simulations on ``XX`` node, let's first access the node using,
+
+.. code-block:: console
+
+   $ ssh XX
+
+Then, let's load the python and gsl modules,
 
 .. code-block:: console
 
