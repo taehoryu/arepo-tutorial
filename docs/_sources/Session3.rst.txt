@@ -11,8 +11,8 @@ There are four big steps in running hydrodynamics simulations using AREPO.
 
 1) Creating initial condition files - ``Arepo-snap-util``
 2) Compiling - ``AREPO``
-3) Running  - ``Arepo-snap-util``
-4) Analyzing  - ``AREPO``
+3) Running  -  ``AREPO``
+4) Analyzing  - ``Arepo-snap-util``
 
 The code that will be used is written at each step.
 ``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to creat initial condition files, read output data and make plots from the data. In this session, we will first download the codes and install `Arepo-snap-util``.
