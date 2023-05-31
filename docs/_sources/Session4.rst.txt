@@ -7,12 +7,12 @@ Session 4. Making initial condition files and compilation
 1. Overview
 ======================================================
 
-For each physics problem that you want to study using AREPO, you need to have several files in your stage directory where you run simulations.
+For each physics problem that you want to study using ``AREPO``, you need to have several files in your stage directory where you run simulations.
 
-1. Initial condition file (``*.hdf5``): This file describes the initial state of the system that you are interested in
-2. Parameter file (``param.txt``): This file contains the values of parameters needed to simulate the system.
-3. Configuration file (``Config.sh``): This file contains necessary configurations.
-4. Additional files: this files include those that are specific to the problems, such as a file contatining a pre-tabulated table for Helmholtz equation of state.
+1. Initial condition file (``*.hdf5``): This file describes the initial state of the system
+2. Parameter file (``param.txt``): This file contains a list of parameters needed to simulate the system and their values.
+3. Configuration file (``Config.sh``): This file contains a list of configuration commands.
+4. Additional files: these include files specific to the problem, such as a file containing a pre-tabulated table for Helmholtz equation of state.
 
 ``Config.sh`` is the only file you need to compile the code. To run the code, you need the initial condition file, parameter file, and additional files (if necessary). From now on, all the files (``*.hdf5``, ``param.txt``, ``Config.sh``) will be collectively denoted as ''initial setup files``.
 
