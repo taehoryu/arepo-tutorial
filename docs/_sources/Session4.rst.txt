@@ -19,7 +19,7 @@ For each physics problem that you want to study using ``AREPO``, you need to hav
 This session comprises of two sub-sessions. In the first sub-session (``1. Make initial setup files``), we will make all those initial setup files and in the second sub-session (``2. Compilation``), we will compile the code.
 
 
-1. Make initial setup files
+2. Make initial setup files
 ======================================================
 
 For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
@@ -47,7 +47,7 @@ A sample parameter file is included in the directory. Detailed explanations will
 
 A configuration file (Config.sh) is included in the directory. Detailed explanations will be given in the session.
 
-2. Compilation
+3. Compilation
 ======================================================
 Let's do the part that first-time users would spend a long time on. As before, we will go through this step by step.
 
@@ -101,11 +101,11 @@ If you increase the compilation speed by using multiple cores, you can add ``-j5
 
 you should see an executable ``Arepo``. Now you are ready to run!
 
-3. A few tips
+4. A few tips
 ======================================================
 
 These are few useful tips.
 
-1. An AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin to make sure that (0, 0, 0) is at the left bottom corner of the domain.
+1. The AREPO domain with box size `L` starts from 0 to `L`, not `-L/2` to `L/2`. So you need to re-adjust the domain origin to make sure that (0, 0, 0) is at the bottom-left corner of the domain.
 
 2. To comment out in the parameter file, use ``%``. However, use ``#`` to comment out in the configuration file.
