@@ -35,17 +35,17 @@ We will proceed this tutorial using the shock tube test as the first exercise, w
 1) Create initial condition file
 ---------------------------------
 
-A python script for generating the initial condition file (``create.py``) is included in the directory. Detailed explanations will be given in the session.
+A python script for generating the initial condition file (``create.py`` or ``create.ipynb``) is included in the directory. Detailed explanations will be given in the session.
 
 2) Create parameter file
 -------------------------
 
-A sample parameter file is included in the directory. Detailed explanations will be given in the session.
+A sample parameter file (``param.txt``) is included in the directory. Detailed explanations will be given in the session.
 
 3) Create configuration file
 -----------------------------
 
-A configuration file (Config.sh) is included in the directory. Detailed explanations will be given in the session.
+A configuration file (``Config.sh``) is included in the directory. Detailed explanations will be given in the session.
 
 Compilation
 ======================================================
