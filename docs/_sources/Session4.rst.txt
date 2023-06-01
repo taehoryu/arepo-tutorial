@@ -4,7 +4,7 @@
 Session 4. Making initial condition files and compilation
 ************************************************************************************
 
-1. Overview
+Overview
 ======================================================
 
 For each physics problem that you want to study using ``AREPO``, you need to have several files in your stage directory where you run simulations.
@@ -19,7 +19,7 @@ For each physics problem that you want to study using ``AREPO``, you need to hav
 This session comprises of two sub-sessions. In the first sub-session (``1. Make initial setup files``), we will make all those initial setup files and in the second sub-session (``2. Compilation``), we will compile the code.
 
 
-2. Make initial setup files
+Make initial setup files
 ======================================================
 
 For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
@@ -47,7 +47,7 @@ A sample parameter file is included in the directory. Detailed explanations will
 
 A configuration file (Config.sh) is included in the directory. Detailed explanations will be given in the session.
 
-3. Compilation
+Compilation
 ======================================================
 Let's do the part that first-time users would spend a long time on. As before, we will go through this step by step.
 
@@ -101,7 +101,7 @@ If you increase the compilation speed by using multiple cores, you can add ``-j5
 
 you should see an executable ``Arepo``. Now you are ready to run!
 
-4. A few tips
+A few tips
 ======================================================
 
 These are few useful tips.

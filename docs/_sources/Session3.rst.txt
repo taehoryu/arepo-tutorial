@@ -28,6 +28,13 @@ You can download a zipped file containing the codes using the link to Datashare.
 
    $ AREPO Arepo-snap-util
    
+   
+Access to cluster
+=================
+We will create the initial setup files and make plots using Jupyter notebook. So instead of doing ``ssh <yourid>@<address>``, 
+
+
+   
 Installation
 =============
 To run ``AREPO``, you would need to install several dependent programs (e.g., hdf5, mpi, gsl, and fftw). However, all those programs are already installed on the MPA cluster. So you don't need to install anything and all you need to do is load proper environmental modules required for compiling and running ``AREPO`` simulations.

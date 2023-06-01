@@ -49,20 +49,20 @@
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session3.html">Session 3. Preparation - download and installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 4. Making initial condition files and compilation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-initial-setup-files">2. Make initial setup files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-initial-setup-files">Make initial setup files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-initial-condition-file">1) Create initial condition file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-parameter-file">2) Create parameter file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-configuration-file">3) Create configuration file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#compilation">3. Compilation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compilation">Compilation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#load-modules">1) Load modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-systype">2) Set SYSTYPE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#compile">3) Compile</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#a-few-tips">4. A few tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-few-tips">A few tips</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Session5.html">Session 5. Running simulation and analyzing data</a></li>
@@ -98,7 +98,7 @@
   <section id="session-4-making-initial-condition-files-and-compilation">
 <span id="session4"></span><h1>Session 4. Making initial condition files and compilation<a class="headerlink" href="#session-4-making-initial-condition-files-and-compilation" title="Permalink to this heading"></a></h1>
 <section id="overview">
-<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>For each physics problem that you want to study using <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, you need to have several files in your stage directory where you run simulations.</p>
 <ul class="simple">
 <li><p>Initial condition file (<code class="docutils literal notranslate"><span class="pre">*.hdf5</span></code>): This file describes the initial state of the system</p></li>
@@ -110,7 +110,7 @@
 <p>This session comprises of two sub-sessions. In the first sub-session (<code class="docutils literal notranslate"><span class="pre">1.</span> <span class="pre">Make</span> <span class="pre">initial</span> <span class="pre">setup</span> <span class="pre">files</span></code>), we will make all those initial setup files and in the second sub-session (<code class="docutils literal notranslate"><span class="pre">2.</span> <span class="pre">Compilation</span></code>), we will compile the code.</p>
 </section>
 <section id="make-initial-setup-files">
-<h2>2. Make initial setup files<a class="headerlink" href="#make-initial-setup-files" title="Permalink to this heading"></a></h2>
+<h2>Make initial setup files<a class="headerlink" href="#make-initial-setup-files" title="Permalink to this heading"></a></h2>
 <p>For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> are,</p>
 <ol class="arabic simple">
 <li><p>create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.</p></li>
@@ -132,7 +132,7 @@
 </section>
 </section>
 <section id="compilation">
-<h2>3. Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading"></a></h2>
+<h2>Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading"></a></h2>
 <p>Let’s do the part that first-time users would spend a long time on. As before, we will go through this step by step.</p>
 <section id="load-modules">
 <h3>1) Load modules<a class="headerlink" href="#load-modules" title="Permalink to this heading"></a></h3>
@@ -173,7 +173,7 @@
 </section>
 </section>
 <section id="a-few-tips">
-<h2>4. A few tips<a class="headerlink" href="#a-few-tips" title="Permalink to this heading"></a></h2>
+<h2>A few tips<a class="headerlink" href="#a-few-tips" title="Permalink to this heading"></a></h2>
 <p>These are few useful tips.</p>
 <ol class="arabic simple">
 <li><p>The AREPO domain with box size <cite>L</cite> starts from 0 to <cite>L</cite>, not <cite>-L/2</cite> to <cite>L/2</cite>. So you need to re-adjust the domain origin to make sure that (0, 0, 0) is at the bottom-left corner of the domain.</p></li>
