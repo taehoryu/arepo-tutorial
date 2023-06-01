@@ -31,10 +31,21 @@ You can download a zipped file containing the codes using the link to Datashare.
    
 Access to cluster
 =================
-We will create the initial setup files and make plots using Jupyter notebook. So instead of doing ``ssh <yourid>@<address>``, 
+We will create the initial setup files and make plots using Jupyter notebook. So instead of doing ``ssh <yourid>@<address>``, we access to the cluster using the following line,
 
+.. code-block:: console
 
+   $ ssh -L <PORT>:localhost:<PORT> <yourid>@<address>
    
+where you can pick a random number for <PORT>, e.g., <PORT> = 8080 or 10331. Then we will log onto the designated compute note using the following line,
+
+.. code-block:: console
+
+   $ ssh -L <PORT>:localhost:<PORT> <nodename>
+
+All the tutorial seesions will be done on the designated node.
+
+
 Installation
 =============
 To run ``AREPO``, you would need to install several dependent programs (e.g., hdf5, mpi, gsl, and fftw). However, all those programs are already installed on the MPA cluster. So you don't need to install anything and all you need to do is load proper environmental modules required for compiling and running ``AREPO`` simulations.

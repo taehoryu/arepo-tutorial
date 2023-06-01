@@ -115,7 +115,15 @@ There are four big steps in running hydrodynamics simulations using AREPO.</p>
 </section>
 <section id="access-to-cluster">
 <h2>Access to cluster<a class="headerlink" href="#access-to-cluster" title="Permalink to this heading"></a></h2>
-<p>We will create the initial setup files and make plots using Jupyter notebook. So instead of doing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourid&gt;&#64;&lt;address&gt;</span></code>,</p>
+<p>We will create the initial setup files and make plots using Jupyter notebook. So instead of doing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourid&gt;&#64;&lt;address&gt;</span></code>, we access to the cluster using the following line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>-L<span class="w"> </span>&lt;PORT&gt;:localhost:&lt;PORT&gt;<span class="w"> </span>&lt;yourid&gt;@&lt;address&gt;
+</pre></div>
+</div>
+<p>where you can pick a random number for &lt;PORT&gt;, e.g., &lt;PORT&gt; = 8080 or 10331. Then we will log onto the designated compute note using the following line,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>-L<span class="w"> </span>&lt;PORT&gt;:localhost:&lt;PORT&gt;<span class="w"> </span>&lt;nodename&gt;
+</pre></div>
+</div>
+<p>All the tutorial seesions will be done on the designated node.</p>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
