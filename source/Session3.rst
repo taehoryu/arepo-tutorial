@@ -37,7 +37,7 @@ We will create the initial setup files and make plots using Jupyter notebook. So
 
    $ ssh -L <PORT>:localhost:<PORT> <yourid>@<address>
    
-where you can pick a random number for <PORT>, e.g., <PORT> = 8080 or 10331. Then we will log onto the designated compute note using the following line,
+where you can pick a random number for <PORT>, e.g., <PORT> = 8080 or 10331. Then we will log onto the designated compute note named ``<nodename>`` using the following line,
 
 .. code-block:: console
 
