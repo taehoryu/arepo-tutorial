@@ -103,7 +103,7 @@ To execute the python script, use the command line,
 
    $ python3 snapshot_single.py
    
-or you can use a Jupyter notebook file ``plot_shock_tube.ipynb``,
+or you can use a Jupyter notebook file ``snapshot_single.ipynb``,
 
 Using the script, you will get the following image,
 
