@@ -10,19 +10,19 @@ A python script for making a single main-sequence star can be found in ``run/Sta
 
 .. code-block:: console
 
-   $ MESAmodel  helm_table.dat  ic_MS.py  ic_MS.ipynb   module.py   param_config_sample  snapshot_single.py  species55.txt
+   $ MESAmodel  helm_table.dat  ic_MS.py  ic_MS.ipynb   module.py   param_config_sample  plot_single.py  species55.txt
 
 - ``MESAmodel`` contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (``MESA_0.3Msol_Z0.020_H0.69.data``) and one for a 1Msol star (``MESA_1Msol_Z0.02_H0.5.data``). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can be in any format as long as those quantities are properly read in ``ic_MS.py``.
 
 - ``helm_table.dat`` and ``species55.txt`` are files for the Helmholtz EOS which will be used for relaxing the star.
 
-- ``ic_MS.py`` is a python script which creates the initial condition files and puts them in a stage directory.
+- ``ic_MS.py`` or ``ic_MS.ipynb`` is a python script which creates the initial condition files and puts them in a stage directory.
 
 - ``module.py`` contains several python functions that are used to make the initial condition files and creating plots.
 
 - ``param_config_sample`` constains sample ``param.txt`` and ``Config.sh`` which will be copied to the stage directory.
 
-- ``snapshot_single.py`` is a python script in which output data are read to make a plot.
+- ``plot_single.py``  or ``plot_single.ipynb`` is a python script in which output data are read to make a plot.
 
 
 2. Creating 3D star

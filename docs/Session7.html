@@ -91,14 +91,14 @@
 <section id="overview">
 <h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>A python script for making a binary star can be found in <code class="docutils literal notranslate"><span class="pre">run/Binary_relaxation/Creating_IC</span></code>. In the directory, you can find the following files,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>helm_table.dat<span class="w">  </span>ic_binary.py<span class="w">  </span>ic_binary.ipynb<span class="w">  </span>module.py<span class="w">  </span>param_config_sample<span class="w">  </span>snapshot_binary.py<span class="w">  </span>species55.txt
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>helm_table.dat<span class="w">  </span>ic_binary.py<span class="w">  </span>ic_binary.ipynb<span class="w">  </span>module.py<span class="w">  </span>param_config_sample<span class="w">  </span>plot_binary.py<span class="w">  </span>species55.txt
 </pre></div>
 </div>
 <p>Now we will create a binary consisting of two stars that we relaxed in the previous section</p>
 </section>
 <section id="creating-3d-binary-star">
 <h2>2. Creating 3D binary star<a class="headerlink" href="#creating-3d-binary-star" title="Permalink to this heading"></a></h2>
-<p>Like <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>, <code class="docutils literal notranslate"><span class="pre">ic_binary.py</span></code> is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically. You just need to make sure that <code class="docutils literal notranslate"><span class="pre">path_to_single_relaxed_star</span></code> is properly set to one of the output files from the simulation for the single star relaxation.</p>
+<p>Like <code class="docutils literal notranslate"><span class="pre">ic_MS.py</span></code>, <code class="docutils literal notranslate"><span class="pre">ic_binary.py</span></code> or <code class="docutils literal notranslate"><span class="pre">ic_binary.ipynb</span></code> is written such that it generates initial condition files and puts all the necessary files in a new directory authomatically. You just need to make sure that <code class="docutils literal notranslate"><span class="pre">path_to_single_relaxed_star</span></code> is properly set to one of the output files from the simulation for the single star relaxation.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nv">path_to_single_relaxed_star</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;../../Star_relaxation/MS_relaxation_1.0msun/output/snapshot_010.hdf5&quot;</span>
 </pre></div>
 </div>
