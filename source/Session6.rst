@@ -103,25 +103,7 @@ To execute the python script, use the command line,
 
    $ python3 snapshot_single.py
    
-or you can open a jupyter notebook file,
-
-.. code-block:: console
-
-   $ jupyter notebook --no-browser --port <PORT>
-   
-then you will see the following messages:
-
-.. code-block:: console
-
-   $ [I 12:33:51.509 NotebookApp] JupyterLab extension loaded from ...
-   $ [I 12:33:51.509 NotebookApp] ...
-   $ To access the notebook, open this file in a browser:
-   $    file://...
-   $ Or copy and paste one of these URLs:
-   $    http://localhost:<PORT>/?token=....
-   $...
-   
-you can copy and paste the entire URLs starting with http://localhost:<PORT>/?token=... to your favorite browser.
+or you can use a Jupyter notebook file ``plot_shock_tube.ipynb``,
 
 Using the script, you will get the following image,
 

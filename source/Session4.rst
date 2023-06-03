@@ -35,7 +35,26 @@ We will proceed this tutorial using the shock tube test as the first exercise, w
 1) Create initial condition file
 ---------------------------------
 
-A python script for generating the initial condition file (``create.py`` or ``create.ipynb``) is included in the directory. Detailed explanations will be given in the session.
+A python script for generating the initial condition file (``create.py`` or ``create.ipynb``) is included in the directory. Detailed explanations will be given in the session. To open the Jupyter notebook file, use the following line,
+
+.. code-block:: console
+
+   $ jupyter notebook --no-browser --port <PORT>
+   
+then you will see the following messages:
+
+.. code-block:: console
+
+   $ [I 12:33:51.509 NotebookApp] JupyterLab extension loaded from ...
+   $ [I 12:33:51.509 NotebookApp] ...
+   $ To access the notebook, open this file in a browser:
+   $    file://...
+   $ Or copy and paste one of these URLs:
+   $    http://localhost:<PORT>/?token=....
+   $...
+   
+you can copy and paste the entire URLs starting with http://localhost:<PORT>/?token=... to your favorite browser. You can open the file on your browser.
+
 
 2) Create parameter file
 -------------------------
