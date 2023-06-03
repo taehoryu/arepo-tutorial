@@ -10,7 +10,7 @@ A python script for making a binary star can be found in ``run/Binary_relaxation
 
 .. code-block:: console
 
-   $ helm_table.dat  ic_binary.py  module.py    param_config_sample  snapshot_binary.py  species55.txt
+   $ helm_table.dat  ic_binary.py  ic_binary.ipynb  module.py  param_config_sample  snapshot_binary.py  species55.txt
    
 Now we will create a binary consisting of two stars that we relaxed in the previous section
 

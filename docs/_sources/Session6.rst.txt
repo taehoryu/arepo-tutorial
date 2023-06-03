@@ -10,7 +10,7 @@ A python script for making a single main-sequence star can be found in ``run/Sta
 
 .. code-block:: console
 
-   $ MESAmodel  helm_table.dat  ic_MS.py  module.py    param_config_sample  snapshot_single.py  species55.txt
+   $ MESAmodel  helm_table.dat  ic_MS.py  ic_MS.ipynb   module.py   param_config_sample  snapshot_single.py  species55.txt
 
 - ``MESAmodel`` contains MESA models that will be mapped into a 3D domain. You can see two stellar models, one for a 0.3Msol star (``MESA_0.3Msol_Z0.020_H0.69.data``) and one for a 1Msol star (``MESA_1Msol_Z0.02_H0.5.data``). The files contain a table with each column having a key quantity necessary for mapping (e.g., density, internal energy, radius and so on). The file can be in any format as long as those quantities are properly read in ``ic_MS.py``.
 
@@ -33,6 +33,8 @@ Because ``ic_MS.py`` is written to make initial condition files and put all the 
 .. code-block:: console
 
    $ python3 ic_MS.py
+   
+or you can use a Jupyter notebook file ``ic_MS.ipynb``.
    
 then you can see the following (or similar) messages on display,
 
