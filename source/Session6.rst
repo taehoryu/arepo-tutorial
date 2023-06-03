@@ -102,8 +102,28 @@ To execute the python script, use the command line,
 .. code-block:: console
 
    $ python3 snapshot_single.py
+   
+or you can open a jupyter notebook file,
 
-then, you will get the following image,
+.. code-block:: console
+
+   $ jupyter notebook --no-browser --port <PORT>
+   
+then you will see the following messages:
+
+.. code-block:: console
+
+   $ [I 12:33:51.509 NotebookApp] JupyterLab extension loaded from ...
+   $ [I 12:33:51.509 NotebookApp] ...
+   $ To access the notebook, open this file in a browser:
+   $    file://...
+   $ Or copy and paste one of these URLs:
+   $    http://localhost:<PORT>/?token=....
+   $...
+   
+you can copy and paste the entire URLs starting with http://localhost:<PORT>/?token=... to your favorite browser.
+
+Using the script, you will get the following image,
 
 .. image:: ../images/single_star_relaxation.png
    :width: 600
