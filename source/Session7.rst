@@ -37,6 +37,9 @@ With that, you can generate the initial condition files using the following comm
 
    $ python3 ic_binary.py
    
+or you can use a Jupyter notebook file ``ic_binary.ipynb``.
+
+   
 then you can see the following (or similar) messages on display,
 
 .. code-block:: console
@@ -98,9 +101,11 @@ To execute the python script, use the command line,
 
 .. code-block:: console
 
-   $ python3 snapshot_binary.py
+   $ python3 plot_binary.py
 
-then, you will get a series of images, for example,
+or you can use a Jupyter notebook file ``plot_binary.ipynb``.
+
+Then, you will get a series of images, for example,
 
 At t = 0
 

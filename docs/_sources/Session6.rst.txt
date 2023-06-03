@@ -101,9 +101,9 @@ To execute the python script, use the command line,
 
 .. code-block:: console
 
-   $ python3 snapshot_single.py
+   $ python3 plot_single.py
    
-or you can use a Jupyter notebook file ``snapshot_single.ipynb``,
+or you can use a Jupyter notebook file ``plot_single.ipynb``,
 
 Using the script, you will get the following image,
 
