@@ -49,8 +49,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Session2.html">Session 2. Introduction to AREPO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session 3. Preparation - download and installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#access-to-cluster">Access to cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#load-modules">1. Load modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-the-path-to-gsl">2. Set the path to <code class="docutils literal notranslate"><span class="pre">gsl</span></code></a></li>
@@ -106,13 +106,6 @@ There are four steps until you run hydrodynamics simulations using AREPO and ana
 <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> is an analysis package designed and developed for <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> simulations, which you will need to creat initial condition files, read output data and make plots from the data. This code has been developed and managed by Ruediger Pakmor (<a class="reference external" href="mailto:rpakmor&#37;&#52;&#48;MPA-Garching&#46;MPG&#46;DE">rpakmor<span>&#64;</span>MPA-Garching<span>&#46;</span>MPG<span>&#46;</span>DE</a>). In this session, we will first download both codes and install <code class="docutils literal notranslate"><span class="pre">Arepo-snap-util</span></code> (you do not need to install <code class="docutils literal notranslate"><span class="pre">AREPO</span></code>, but probably its dependent programs)</p>
 <p>Note that some of the steps enumerated here would be different depending on which machines you are on. Sections or explanations containing something only specific to the MPA cluster (except for directory paths) will be indicated with [<a href="#id1"><span class="problematic" id="id2">*</span></a>MPA]. Also, the path to your directory on the MPA cluster will be shown as <code class="docutils literal notranslate"><span class="pre">&lt;MPA_path_to_your_directory&gt;</span></code>.</p>
 </section>
-<section id="download">
-<h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
-<p>You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the following directories</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>AREPO<span class="w"> </span>Arepo-snap-util
-</pre></div>
-</div>
-</section>
 <section id="access-to-cluster">
 <h2>Access to cluster<a class="headerlink" href="#access-to-cluster" title="Permalink to this heading"></a></h2>
 <p>We will create the initial setup files and make plots using Jupyter notebook. So instead of doing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourid&gt;&#64;&lt;address&gt;</span></code>, we access to the cluster using the following line,</p>
@@ -124,6 +117,13 @@ There are four steps until you run hydrodynamics simulations using AREPO and ana
 </pre></div>
 </div>
 <p>All the tutorial seesions will be done on the designated node.</p>
+</section>
+<section id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
+<p>You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the following directories</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>AREPO<span class="w"> </span>Arepo-snap-util
+</pre></div>
+</div>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>

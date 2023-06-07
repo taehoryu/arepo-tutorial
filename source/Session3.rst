@@ -19,15 +19,6 @@ You can see which code will be used at each step.
 
 Note that some of the steps enumerated here would be different depending on which machines you are on. Sections or explanations containing something only specific to the MPA cluster (except for directory paths) will be indicated with [*MPA]. Also, the path to your directory on the MPA cluster will be shown as ``<MPA_path_to_your_directory>``.
 
-Download
-=========
-
-You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the following directories
-
-.. code-block:: console
-
-   $ AREPO Arepo-snap-util
-   
    
 Access to cluster
 =================
@@ -45,6 +36,16 @@ where you can pick a random number for <PORT>, e.g., <PORT> = 8080 or 10331. The
 
 All the tutorial seesions will be done on the designated node.
 
+
+Download
+=========
+
+You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the following directories
+
+.. code-block:: console
+
+   $ AREPO Arepo-snap-util
+   
 
 Installation
 =============
