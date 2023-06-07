@@ -41,7 +41,8 @@ A python script for generating the initial condition file (``create.py`` or ``cr
 
    $ jupyter notebook --no-browser --port <PORT>
    
-then you will see the following messages:
+Note that you should use the same <PORT> number that you used to log onto the compute node.
+Then you will see the following messages:
 
 .. code-block:: console
 
