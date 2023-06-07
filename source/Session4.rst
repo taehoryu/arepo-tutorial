@@ -84,7 +84,8 @@ We need several modules to compile and run AREPO. Let's load the following modul
    $ module load fftw-mpich/3.3.6
    $ module load gsl
    $ module load hdf5/1.8.18
-
+   $ module load anaconda3
+   
 2) Set SYSTYPE
 ------------------
 

@@ -29,13 +29,19 @@ If the simulation begins properly, you should see this AREPO logo,
 2. Analyzing data
 ================================================
 
-A script which reads the output file and make a line plot is included in the directory (``plot_shock_tube.py``). Now you need to load different modules,
+A script which reads the output file and makes a line plot is included in the directory (``plot_shock_tube.py`` or ``plot_shock_tube.ipynb``). First, let's make sure that we have loaded the following modules (anaconda3 and gsl). If not, please load those using the following lines,
 
 .. code-block:: console
 
    $ module load anaconda3 gsl
+   
+Then open the Jupyter notebook file,
 
-If you execute with the following line,
+.. code-block:: console
+
+   $ jupyter notebook --no-browser --port <PORT>
+
+and execute ``plot_shock_tube.ipynb`` or simply execute the python script,
  
 .. code-block:: console
 
