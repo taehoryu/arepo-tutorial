@@ -54,4 +54,4 @@ you can get this image showing the evolution of the shock,
    :width: 600
 
 
-NOW, you know how to create initial setup files, compile and run the code, and analyze data.
+NOW, you know how to create initial setup files, compile and run the code, and analyze data! We will move onto little more complicated, but more fun examples. 
