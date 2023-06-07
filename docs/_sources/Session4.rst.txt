@@ -24,9 +24,9 @@ Make initial setup files
 
 For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. Then the code generates the initial conditions of the system once the simulation starts.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separate processes. So users make the initial condition files before running simulations, and once you start the simulation, the code simply reads the initial condition files you created and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domain, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
 
-1. create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
+1. create initial condition files and run the simulation in one directory (e.g., Sod's shock-tube): I would recommend this approach if you plan to run only a few simulations.
 
-2. create initial condition files in one directory and run the simulation in a separate directory (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script such that it not only creates the initial conditions, but also puts them in a stage directory for each simulation.
+2. create initial condition files in one directory and run the simulation in a separate directory (Sessions 6 and 7. Practice 1-2): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script such that it not only creates the initial conditions, but also puts them in a stage directory for each simulation.
 
 Of course, these are not the only ways. Users can develope their own workflow.
 
@@ -88,7 +88,7 @@ We need several modules to compile and run AREPO. Let's load the following modul
 2) Set SYSTYPE
 ------------------
 
-To successfully compile almost every hydrodynamics code, it is very important to set the paths to the dependences (e.g., those modules we just loaded) inside the code. As mentioned above, because the paths to the modules are different for dffierent machines, you have to set the paths for each machine you are using. Every code has a different file in which you need to set the paths. The file for ``AREPO`` is ``makefiles/systypes.make``. Fortunately, the system setups for the mpa cluster, raven, cobra, and freya were already set! All you need to do is to make sure that you tell the code correctly which system you are on. You can set the system type by,
+To successfully compile almost every hydrodynamics code, it is very important to set the paths correctly to the dependences (e.g., those modules we just loaded) inside the code. As mentioned above, because the paths to the modules are different for dffierent machines, you have to set the paths for each machine you are using. Every code has a different file in which you need to set the paths. The file for ``AREPO`` is ``makefiles/systypes.make``. Fortunately, the system setups for the mpa cluster, raven, cobra, and freya were already set! All you need to do is to make sure that you tell the code correctly which system you are on. You can set the system type by,
 
 .. code-block:: console
 
