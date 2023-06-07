@@ -30,7 +30,7 @@ For some hydrodynamics codes, a file that creates the initial setup for a simula
 
 Of course, these are not the only ways. Users can develope their own workflow.
 
-We will proceed this tutorial using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``.
+We will proceed this session using the shock tube test as the first exercise, which is located in ``<AREPO_directory>/run/Shock_tube``.
 
 1) Create initial condition file
 ---------------------------------
