@@ -22,7 +22,7 @@ Note that some of the steps enumerated here would be different depending on whic
 Download
 =========
 
-You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the follow directories
+You can download a zip file containing the codes using the link to Datashare. Then you need to transfer the file to your own directory on the MPA cluster and unzip it. Then you can see the following directories
 
 .. code-block:: console
 
