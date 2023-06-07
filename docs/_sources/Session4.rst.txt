@@ -9,7 +9,7 @@ Overview
 
 To run ``AREPO`` simulations for a physics problem that you want to study, you need to have several files in your stage directory where you run the simulations.
 
-- Initial condition file (``*.hdf5``): This file describes the initial state of the system
+- Initial condition file (``*.hdf5``): This file describes the initial state of the system, e.g., position, velocity, density, internal energy of each cell describing the system. 
 - Parameter file (``param.txt``): This file contains a list of parameters needed to simulate the system and their values.
 - Configuration file (``Config.sh``): This file contains a list of configuration commands.
 - Additional files: these include files specific to the problem, such as a file containing a pre-tabulated table for Helmholtz equation of state.
