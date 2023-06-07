@@ -15,9 +15,9 @@ There are four steps until you run hydrodynamics simulations using AREPO and ana
 4) Analyzing  - ``Arepo-snap-util``
 
 You can see which code will be used at each step.
-``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to creat initial condition files, read output data and make plots from the data. This code has been developed and managed by Ruediger Pakmor. In this session, we will first download both codes and install `Arepo-snap-util`` (you do not need to install ``AREPO``, but probably its dependent programs)
+``Arepo-snap-util`` is an analysis package designed and developed for ``AREPO`` simulations, which you will need to creat initial condition files, read output data and make plots from the data. This code has been developed and managed by Ruediger Pakmor (rpakmor@MPA-Garching.MPG.DE). In this session, we will first download both codes and install ``Arepo-snap-util`` (you do not need to install ``AREPO``, but probably its dependent programs)
 
-Note that some of the steps enumerated here would be different depending on which machines you are on. Sections containing something only specific for the MPA cluster (except for directory paths) will be indicated with [*MPA]. Also the path to your directory on the MPA cluster will be indicated as ``<MPA_path_to_your_directory>``.
+Note that some of the steps enumerated here would be different depending on which machines you are on. Sections or explanations containing something only specific to the MPA cluster (except for directory paths) will be indicated with [*MPA]. Also the path to your directory on the MPA cluster will be indicated as ``<MPA_path_to_your_directory>``.
 
 Download
 =========
