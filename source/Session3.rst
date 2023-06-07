@@ -7,7 +7,7 @@ Session 3. Preparation - download and installation
 Overview
 ================================================================
 The codes that you will need are ``AREPO`` and ``Arepo-snap-util``.
-There are four big steps in running hydrodynamics simulations using AREPO.
+There are four steps until you run hydrodynamics simulations using AREPO and analyze data from the simulations.
 
 1) Creating initial condition files - ``Arepo-snap-util``
 2) Compiling - ``AREPO``
