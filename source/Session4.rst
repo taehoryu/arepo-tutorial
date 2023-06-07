@@ -54,7 +54,7 @@ Then you will see the following messages:
    $    http://localhost:<PORT>/?token=....
    $...
    
-you can copy and paste the entire URLs starting with http://localhost:<PORT>/?token=... to your favorite browser. You can open the file on your browser.
+you can copy and paste the entire URL starting with http://localhost:<PORT>/?token=... to your favorite browser, which will browse and open files on your browser.
 
 
 2) Create parameter file
