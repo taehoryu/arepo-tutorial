@@ -9,10 +9,10 @@ Overview
 
 To run ``AREPO`` simulations for a physics problem that you want to study, you need to have several files in your stage directory where you run the simulations.
 
-- Initial condition file (``*.hdf5``): This file describes the initial state of the system, e.g., position, velocity, density, internal energy of each cell describing the system. 
+- Initial condition file (``*.hdf5``): This file describes the initial state of the system, e.g., position, velocity, density, internal energy of each cell describing the system.
 - Parameter file (``param.txt``): This file contains a list of parameters needed to simulate the system and their values.
 - Configuration file (``Config.sh``): This file contains a list of configuration commands.
-- Additional files: these include files specific to the problem, such as a file containing a pre-tabulated table for Helmholtz equation of state.
+- Additional files: These include files specific to the problem, such as a file containing a pre-tabulated table for Helmholtz equation of state.
 
 ``Config.sh`` is the only file you need when compiling the code. To run the code, you need the initial condition file, parameter file, and additional files (if necessary). From now on, all the files (``*.hdf5``, ``param.txt``, ``Config.sh``) will be collectively denoted as ''initial setup files``.
 
@@ -22,11 +22,11 @@ This session comprises of two sub-sessions. In the first sub-session (``1. Make 
 Make initial setup files
 ======================================================
 
-For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. In this method, the code generates the initial conditions of the system once the simulation runs.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separated. So users make the initial condition files before running simulations, and once you start the simulation, the code reads the initial condition files and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domian, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
+For some hydrodynamics codes, a file that creates the initial setup for a simulation is compiled together with the main part of the code. Then the code generates the initial conditions of the system once the simulation starts.  However, ``AREPO`` takes another approach in which making initial condition files and running the simulation are separate processes. So users make the initial condition files before running simulations, and once you start the simulation, the code simply reads the initial condition files you created and maps the initial setup (e.g., domain size, mass distribution, and so on) into the domain, and evolves the system. Two ways that I found convenient when it comes to creating initial condition files and running simulations using ``AREPO`` are,
 
 1. create initial condition files and run the simulation in one directory (Session 6. Practice 1 - shock-tube): I would recommend this approach if you plan to run only a few simulations.
 
-2. create initial condition files in one directory and run the simulation in a separate directory (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient not only to write a python script which creates the initial conditions, but also puts them in a stage directory for each simulation.
+2. create initial condition files in one directory and run the simulation in a separate directory (Session 7. Practice 2 - relaxation of main-sequence star): I would recommend this if you plan to run many simulations (more than a few) with similar setups (e.g., 5 simulations for collisions between 1Msol stars, 5 simulations for 2Msol stars, 5 simulations for 10 Msol stars). For that case, it would be more convenient for you to write a python script such that it not only creates the initial conditions, but also puts them in a stage directory for each simulation.
 
 Of course, these are not the only ways. Users can develope their own workflow.
 
