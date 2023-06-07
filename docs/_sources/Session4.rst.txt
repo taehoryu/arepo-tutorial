@@ -7,7 +7,7 @@ Session 4. Making initial condition files and compilation
 Overview
 ======================================================
 
-For each physics problem that you want to study using ``AREPO``, you need to have several files in your stage directory where you run simulations.
+To run ``AREPO`` simulations for a physics problem that you want to study, you need to have several files in your stage directory where you run the simulations.
 
 - Initial condition file (``*.hdf5``): This file describes the initial state of the system
 - Parameter file (``param.txt``): This file contains a list of parameters needed to simulate the system and their values.
