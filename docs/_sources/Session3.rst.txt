@@ -80,11 +80,11 @@ which will give the following information [*MPA],
    $ -------------------------------------------------------------------
    $ ..../gsl/2.4:
    $ module-whatis    ....
-   $ prepend-path    PATH    ...
+   $ prepend-path    PATH    <PATH_TO_GSL>
    $ prepend-path    LD_LIBRARY_PATH    ....
    $ -------------------------------------------------------------------
 
-The path to ``gsl`` is next to ``PATH``. Now go to the ``Arepo-snap-util`` directory,
+The path to ``gsl`` (``<PATH_TO_GSL>`` with ``bin``) is next to ``PATH``. Now go to the ``Arepo-snap-util`` directory,
 
 .. code-block:: console
 
@@ -94,8 +94,8 @@ and add the following lines [*MPA],
 
 .. code-block:: python
 
-   incl_dirs = ['.../include']
-   libs_dirs = ['.../lib']
+   incl_dirs = ['<PATH_TO_GSL>/include']
+   libs_dirs = ['<PATH_TO_GSL>/lib']
 
 below ``#ADD PATH HERE`` in ``setup.py`` using your favorite editor (e.g., emacs). Here, '...' should be replaced with the path to gsl. If you want to analyze data on ``raven``, ``cobra`` or ``freya`` using the same analysis package, please follow the same steps above: the only difference would be that you will need to use the proper path to ``gsl`` on the machine you are on (* cobra needs extra steps. If you want to run on cobra, please let me know).
 
