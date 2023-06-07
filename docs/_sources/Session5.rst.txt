@@ -47,11 +47,11 @@ and execute ``plot_shock_tube.ipynb`` or simply execute the python script,
 
    $ python3 plot_shock_tube.py
    
+   
 you can get this image showing the evolution of the shock,
 
 .. image:: ../images/shock_tube_1d.png
    :width: 600
 
-Detailed explanations for the python script will be given during the session.
 
-
+NOW, you know how to create initial setup files, compile and run the code, and analyze data.
