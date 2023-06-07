@@ -34,7 +34,7 @@ where you can pick a random number for <PORT>, e.g., <PORT> = 8080 or 10331. The
 
    $ ssh -L <PORT>:localhost:<PORT> <nodename>
 
-All the tutorial seesions will be done on the designated node.
+All the tutorial seesions will be done on the designated node. Or if you follow this tutorial on your own, you can be on any of the computes nodes.
 
 
 Download
@@ -56,13 +56,7 @@ However, you need to install ``Arepo-snap-util`` to use its built-in routines. O
 1. Load modules
 ---------------
   
-Because we will compile and run the test simulations on ``XX`` node, let's first access the node using,
-
-.. code-block:: console
-
-   $ ssh XX
-
-Then, let's load the python and gsl modules,
+Let's load the python and gsl modules,
 
 .. code-block:: console
 
