@@ -6,7 +6,7 @@ Session 6. Practice 1 - relaxation of main-sequence star
 
 1. Overview
 ==================================
-A python script for making a single main-sequence star can be found in ``run/Star_relaxation/Creating_IC``. In the directory, you can find the following files,
+Two python scripts for making a single main-sequence star can be found in ``run/Star_relaxation/Creating_IC``. In the directory, you can find the following files,
 
 .. code-block:: console
 
@@ -36,7 +36,7 @@ Because ``ic_MS.py`` is written to make initial condition files and put all the 
    
 or you can use a Jupyter notebook file ``ic_MS.ipynb``.
    
-then you can see the following (or similar) messages on display,
+Then you can see the following (or similar) messages on display,
 
 .. code-block:: console
 
@@ -69,7 +69,7 @@ Now let's see how the initial condition files are made in ``ic_MS.py``.
 3. Compiling
 ==================================
 
-As we did before, we first load the environment modules
+As we did before, we first load the environment modules (if you haven't)
 
 .. code-block:: console
 
@@ -79,6 +79,7 @@ As we did before, we first load the environment modules
    $ module load fftw-mpich/3.3.6
    $ module load gsl
    $ module load hdf5/1.8.18
+   $ module load anaconda3
 
 and go to the top level of the AREPO directory (``<path_to_AREPO>/AREPO/``) and compile using the following line,
 

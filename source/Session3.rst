@@ -60,7 +60,7 @@ Let's load the python and gsl modules [*MPA],
 
 .. code-block:: console
 
-   $ module load python3 gsl
+   $ module load python3/3.11.2 gsl
 
 
 

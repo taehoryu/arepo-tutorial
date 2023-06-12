@@ -90,7 +90,7 @@
 <span id="session6"></span><h1>Session 6. Practice 1 - relaxation of main-sequence star<a class="headerlink" href="#session-6-practice-1-relaxation-of-main-sequence-star" title="Permalink to this heading"></a></h1>
 <section id="overview">
 <h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p>A python script for making a single main-sequence star can be found in <code class="docutils literal notranslate"><span class="pre">run/Star_relaxation/Creating_IC</span></code>. In the directory, you can find the following files,</p>
+<p>Two python scripts for making a single main-sequence star can be found in <code class="docutils literal notranslate"><span class="pre">run/Star_relaxation/Creating_IC</span></code>. In the directory, you can find the following files,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>MESAmodel<span class="w">  </span>helm_table.dat<span class="w">  </span>ic_MS.py<span class="w">  </span>ic_MS.ipynb<span class="w">   </span>module.py<span class="w">   </span>param_config_sample<span class="w">  </span>plot_single.py<span class="w">  </span>species55.txt
 </pre></div>
 </div>
@@ -110,7 +110,7 @@
 </pre></div>
 </div>
 <p>or you can use a Jupyter notebook file <code class="docutils literal notranslate"><span class="pre">ic_MS.ipynb</span></code>.</p>
-<p>then you can see the following (or similar) messages on display,</p>
+<p>Then you can see the following (or similar) messages on display,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>ic_MS.py
 <span class="gp">$ </span><span class="o">[</span>Stellar<span class="w"> </span>info<span class="o">]</span>
 <span class="gp">$ </span>MESAmodel<span class="w"> </span>MESAmodel/MESA_1Msol_Z0.02_H0.5.data
@@ -139,13 +139,14 @@
 </section>
 <section id="compiling">
 <h2>3. Compiling<a class="headerlink" href="#compiling" title="Permalink to this heading"></a></h2>
-<p>As we did before, we first load the environment modules</p>
+<p>As we did before, we first load the environment modules (if you haven’t)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>/usr/common/appl/modules-tcl/init/sh
 <span class="gp">$ </span>module<span class="w"> </span>purge
 <span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>mpich/3.3.6
 <span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>fftw-mpich/3.3.6
 <span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>gsl
 <span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.8.18
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>anaconda3
 </pre></div>
 </div>
 <p>and go to the top level of the AREPO directory (<code class="docutils literal notranslate"><span class="pre">&lt;path_to_AREPO&gt;/AREPO/</span></code>) and compile using the following line,</p>
