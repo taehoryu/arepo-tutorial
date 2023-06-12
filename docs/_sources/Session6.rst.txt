@@ -79,7 +79,7 @@ As we did before, we first load the environment modules (if you haven't)
    $ module load fftw-mpich/3.3.6
    $ module load gsl
    $ module load hdf5/1.8.18
-   $ module load anaconda3
+   $ module load python3/3.11.2
 
 and go to the top level of the AREPO directory (``<path_to_AREPO>/AREPO/``) and compile using the following line,
 

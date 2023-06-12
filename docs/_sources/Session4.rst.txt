@@ -39,7 +39,7 @@ A python script for generating the initial condition file (``create.py`` or ``cr
 
 .. code-block:: console
 
-   $ jupyter notebook --no-browser --port <PORT>
+   $ jupyter-notebook --no-browser --port <PORT>
    
 Note that you should use the same <PORT> number that you used to log onto the compute node.
 Then you will see the following messages:
@@ -84,7 +84,7 @@ We need several modules to compile and run AREPO. Let's load the following modul
    $ module load fftw-mpich/3.3.6
    $ module load gsl
    $ module load hdf5/1.8.18
-   $ module load python3
+   $ module load python3/3.11.2
    
 2) Set SYSTYPE
 ------------------
